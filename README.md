@@ -2,4 +2,4 @@
 
 Perfomance Evaluation project:
 
-$\sum$
+\section{Models}
