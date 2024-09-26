@@ -2,4 +2,7 @@
 
 Perfomance Evaluation project:
 
-# Models
+# Models :
+  TODO
+  Simple 2D car: possible actions: (turn left, turn right, accelerate)
+
