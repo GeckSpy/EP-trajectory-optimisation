@@ -3,11 +3,16 @@
 Perfomance Evaluation project:
 
 # Analysis
+Expectation:
+
+
 Models :
-  TODO
-  Simple 2D car: possible actions: (turn left, turn right, accelerate)
+  Modeles n°1:
+    TODO
+    Simple 2D car: possible actions: (turn left, turn right, accelerate)
 
 # Simulation
+Entrainement et resultat de l'IA.
 
 # Experimentation:
-Evaluation (principalement du la simulation)
+Evaluation de performance de tout mais principalement du la partie simulation
