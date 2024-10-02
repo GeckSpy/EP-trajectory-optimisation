@@ -9,6 +9,7 @@ Modifying existing environment (and possibly creating our own) for our 2D car mo
 
  # II) Simulation :
  A) Implementation
+ 
   The purpose of using AI is to train the AI models to find a trajectory as good as possible then we will:
   - Implement Q-learning algorithm which is a algorithm to train an AI.
   - Implement Deep Q-learning with Pytorch python package.
@@ -16,6 +17,7 @@ Modifying existing environment (and possibly creating our own) for our 2D car mo
   In both case, we will have to play with the hyperparameters and the algorithm to make it as efficient as possible.
 
   B) Training
+  
   - Train the AI in all the models with different training times and the algorithms (Q-learning VS Deep Q-learning VS other algorithm and/or more basic one).
 
 
