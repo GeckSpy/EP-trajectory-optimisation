@@ -5,7 +5,10 @@ Perfomance Evaluation project:
 # Analysis
 Expectation:
 
+\rightarrow
+
 Models :
+  utiliser module Gym pour environnement.
   Modeles n°1:
     TODO
     Simple 2D car: possible actions: (turn left, turn right, accelerate)
