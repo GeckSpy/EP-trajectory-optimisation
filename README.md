@@ -5,7 +5,6 @@ Perfomance Evaluation project:
 # Analysis
 Expectation:
 
-
 Models :
   Modeles n°1:
     TODO
@@ -15,4 +14,4 @@ Models :
 Entrainement et resultat de l'IA.
 
 # Experimentation:
-Evaluation de performance de tout mais principalement du la partie simulation
+Evaluation de performance de tout mais principalement de la partie simulation
