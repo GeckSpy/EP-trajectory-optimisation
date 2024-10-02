@@ -2,6 +2,8 @@
 
 Perfomance Evaluation project:
 
+exemple of Q-learning with gym : https://medium.com/swlh/introduction-to-q-learning-with-openai-gym-2d794da10f3d
+
 # Analysis
 Expectation:
 
