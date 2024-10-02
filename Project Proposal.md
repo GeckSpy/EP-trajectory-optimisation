@@ -3,11 +3,11 @@ Our group for the project is: Mathieu Longatte, Louison Mocq and Macéo Ottavy
 The main goal of our project is to optimize a trajectory of a simple 2D car model in a turn using AI.
 
 ## Obejctives:
- # I) Modeling :
+ # I) Modeling
 Modifying existing environment (and possibly creating our own) for our 2D car model using Gymnasium python package. If the other objectives are cleared, we could try to develop the model to optimize the trajectory of the car for an entire track. This would make us adapt our environment. We could also try to make our model more complex or we could add new aspect like obstacles.
 
 
- # II) Simulation :
+ # II) Simulation
  A) Implementation :
  
   The purpose of using AI is to train the AI models to find a trajectory as good as possible then we will:
@@ -20,7 +20,7 @@ Modifying existing environment (and possibly creating our own) for our 2D car mo
   - Train the AI in all the models with different training times and the algorithms (Q-learning VS Deep Q-learning VS other algorithm and/or more basic one).
 
 
- # III) Experimentation :
+ # III) Experimentation
  We will analyze real trajectory of car racer to be able to compare the trajectories that our car make : Do IA models take turn like humans ? We could try to compare car racer’s trajectory and our trained model’s trajectory on a same track. We would surely compare our different models and also the trade off reward VS training time, between different algorithms, hyperparameters and hardware (CPU VS GPU).
 
 
