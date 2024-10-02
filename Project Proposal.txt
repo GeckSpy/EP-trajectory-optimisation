@@ -9,4 +9,4 @@ Obejctives:
   - Using AI to find a trajectory as good as possible:
     - Implementing Q-learning algorithm which is a algorithm to train an AI.
     - Implementing Deep Q-learning with Pytorch python package.
-  In both case, we will have to play with the parameters and the algorithm.
+  In both case, we will have to play with the parameters and the algorithm to make it as efficient as possible.
