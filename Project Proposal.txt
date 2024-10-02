@@ -1,1 +1,5 @@
-d
+
+Our group for the project is: Mathieu Longatte, Louison Mocq and Macéo Ottavy
+
+The main goal of ou project is to optimize a trajectory of a simple 2D car model in a turn.
+
