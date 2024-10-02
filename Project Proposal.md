@@ -2,8 +2,8 @@ Our group for the project is: Mathieu Longatte, Louison Mocq and Macéo Ottavy
 
 The main goal of our project is to optimize a trajectory of a simple 2D car model in a turn using AI.
 
-Obejctives:
-I) Modeling :
+## Obejctives:
+ # I) Modeling :
 Modifying existing environment (and possibly creating our own) for our 2D car model using Gymnasium python package. If the other objectives are cleared, we could try to develop the model to optimize the trajectory of the car for an entire track. This would make us adapt our environment. We could also try to make our model more complex or we could add new aspect like obstacles.
 
 
