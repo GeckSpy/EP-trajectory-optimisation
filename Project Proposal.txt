@@ -10,3 +10,9 @@ Obejctives:
     - Implementing Q-learning algorithm which is a algorithm to train an AI.
     - Implementing Deep Q-learning with Pytorch python package.
   In both case, we will have to play with the parameters and the algorithm to make it as efficient as possible.
+
+  - Train the AI in all the models and compare the result depending on the training times and the algorithm used (Q-learning VS Deep Q-learning)
+
+  - Analys real trajectory of car racer to be able to compare the trajectories that our car make.
+
+  - Evaluate our result with real best trajectory and trajectory that seems good
