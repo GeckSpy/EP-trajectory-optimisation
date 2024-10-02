@@ -1,5 +1,6 @@
-Our group for the project is: Mathieu Longatte, Louison Mocq and Macéo Ottavy\\
-The main goal of our project is to optimize a trajectory of a simple 2D car model in a turn using AI.\\
+Our group for the project is: Mathieu Longatte, Louison Mocq and Macéo Ottavy
+
+The main goal of our project is to optimize a trajectory of a simple 2D car model in a turn using AI.
 
 Obejctives:
 I) Modeling :
