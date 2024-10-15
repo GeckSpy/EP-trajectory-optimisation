@@ -13,3 +13,9 @@ Entrainement et resultat de l'IA.
 
 # Experimentation:
 Evaluation de performance de tout mais principalement de la partie simulation
+
+
+Proposal:
+2 parts:
+What we are going to do
+How we are going to do it
