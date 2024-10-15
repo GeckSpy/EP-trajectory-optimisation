@@ -6,16 +6,7 @@ exemple of Q-learning with gym : https://medium.com/swlh/introduction-to-q-learn
 
 why Q-learning converges ?  http://users.isr.ist.utl.pt/~mtjspaan/readingGroup/ProofQlearning.pdf
 
-# Analysis
-
-# Simulation
-Entrainement et resultat de l'IA.
-
-# Experimentation:
-Evaluation de performance de tout mais principalement de la partie simulation
-
-
-Proposal:
+# Proposal:
 2 parts:
 What we are going to do
 How we are going to do it
