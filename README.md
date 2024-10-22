@@ -28,4 +28,4 @@ How we are going to do it
 
 Méthodes :
 - Random_action State -> Action : échantillonne uniformément une action parmis les actions possibles étant donné un état
-- Step State, Action -> Action, Reward : le reward doit être un flotant Torch (quelle taille?) 
+- Step State, Action -> Action, Reward : le reward doit être un flotant Torch (quelle taille?) , la fonction doit mettre à jour Done
