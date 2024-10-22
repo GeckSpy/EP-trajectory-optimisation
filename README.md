@@ -18,3 +18,14 @@ gymnasium environment tutorial: https://medium.com/@ym1942/create-a-gymnasium-cu
 2 parts:
 What we are going to do
 How we are going to do it
+
+# The perfect env Class:
+4 attribus :
+- State : un tenseur représentant l'état
+- Done : savoir si l'épisode est terminé
+- observation_size : la dimension du tenseur qui représente les états
+- action_size :  la dimension du tenseur qui représente les actions
+
+Méthodes :
+- Random_action State -> Action : échantillonne uniformément une action parmis les actions possibles étant donné un état
+- Step State, Action -> Action, Reward : le reward doit être un flotant Torch (quelle taille?) 
