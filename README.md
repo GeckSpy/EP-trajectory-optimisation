@@ -10,6 +10,8 @@ How do we do mathematical modeling ?
 We don't have like precise idea on how the algorithms will behave, But we can give informal predictions on the convergences depending on the parameters based on the litterature on 
 Q-learning algorithms , hyperparameters study (nb of epochs, batch_size, learning rate , depth of the network). 
 
+Deep Q learning with Pytorch : https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html
+
 # Proposal:
 2 parts:
 What we are going to do
