@@ -14,6 +14,8 @@ Deep Q learning with Pytorch : https://pytorch.org/tutorials/intermediate/reinfo
 
 gymnasium environment tutorial: https://medium.com/@ym1942/create-a-gymnasium-custom-environment-part-1-04ccc280eea9
 
+DQN on car racing env : https://simmimourya.github.io/data/680_Report_RL.pdf
+
 # Proposal:
 2 parts:
 What we are going to do
