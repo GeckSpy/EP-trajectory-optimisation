@@ -12,7 +12,11 @@ Q-learning algorithms , hyperparameters study (nb of epochs, batch_size, learnin
 
 Deep Q learning with Pytorch : https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html
 
-gymnasium environment tutorial: https://medium.com/@ym1942/create-a-gymnasium-custom-environment-part-1-04ccc280eea9
+gymnasium environment tutorial: 
+ - part 1: https://medium.com/@ym1942/create-a-gymnasium-custom-environment-part-1-04ccc280eea9
+ - part 2: https://medium.com/@ym1942/create-a-gymnasium-custom-environment-part-2-1026b96dba69
+
+   
 
 DQN on car racing env : https://simmimourya.github.io/data/680_Report_RL.pdf
 
