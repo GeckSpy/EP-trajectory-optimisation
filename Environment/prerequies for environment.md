@@ -1,4 +1,6 @@
-Important function for environment
+# Gymnasium environment informations
+
+### Important function for environment
  - reset() : Resets the environment to an initial state, required before calling step.
              Returns the first agent observation for an episode and information, i.e. metrics, debug info.
 
@@ -9,12 +11,14 @@ Important function for environment
 
  - close() : Closes the environment, important when external software is used, i.e. pygame for rendering, databases.
 
+ - get_space() : is necessary for Mathieu's deep Q-learning algo
 
 
+### Inheritancy
 We inherit the "Env" class of Gymnasium and redefine these 4 functions to have access to already existing function and good compatibility.
 
 
-During initialization, we define several critical aspects:
+### During initialization, we define several critical aspects:
  - Action space: A set of all possible actions that an agent can take in the environment.
         It’s a way to outline what actions are available for the agent to choose from at any given step
 
@@ -22,3 +26,4 @@ During initialization, we define several critical aspects:
         Essentially, it describes the form and structure of the data the agent uses to make decisions.
 
  - Initial state: A starting state of the agent when the environment is initialized.
+ 
