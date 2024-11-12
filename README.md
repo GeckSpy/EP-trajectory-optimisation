@@ -20,6 +20,8 @@ gymnasium environment tutorial:
 
 DQN on car racing env : https://simmimourya.github.io/data/680_Report_RL.pdf
 
+Github for trajectory optimisation : https://github.com/NeuralNine/ai-car-simulation/blob/master/newcar.py
+
 # Proposal:
 2 parts:
 What we are going to do
