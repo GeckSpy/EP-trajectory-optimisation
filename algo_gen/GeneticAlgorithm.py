@@ -61,7 +61,7 @@ class GeneticAlgo():
 
         return new_pop
     
-    def algo(self, a=0.3, b=0.3, c= 0.2, gen=1, msg="") -> list[list[Solution]]:
+    def algo(self, a=0.3, b=0.3, c= 0.2, gen=1, fct=None) -> list[list[Solution]]:
         """Compute the genetic algorithm and return last population and the list of best solution at each step.
 
             a is the proportion of kept solutions.
@@ -79,5 +79,6 @@ class GeneticAlgo():
             pop = self.next_pop(pop, a, b, c)
             best_of_each_gen.append(pop[0])
             if (actual_gen+1) % gen == 0:
-                print(actual_gen, msg, end="")
+                if fct!=None:
+                    fct(actual_gen, pop[0])
         return [pop, best_of_each_gen]
