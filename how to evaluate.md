@@ -12,6 +12,6 @@
 - power usage 
 - parallelisation 
 - memory usage
-- For GA: Markov gen modelisation
+- For GA: Markov gen modelisation -> no possible mixing time
 
 # How to 
