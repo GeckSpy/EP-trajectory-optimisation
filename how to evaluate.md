@@ -55,7 +55,6 @@ Optional :
     - over fitting ?
 
 
-
 - comparer avec vraie trajectoire 
 
 Conclusion :
