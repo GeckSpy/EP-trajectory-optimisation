@@ -1,12 +1,17 @@
 # What are we evaluating : 
 - algorithms 
+    - Q-learning
     - Deep-Q learning
-    - Gen algo 
+    - Gen algo: classical + NEAT
 
 # What are the key components :
-- time complexity 
+- time complexity
+    - statistique
+    - time to reach goal (finding cars that do at least one lap)
+    - play with hyperparameters
 - power usage 
 - parallelisation 
 - memory usage
+- For GA: Markov gen modelisation
 
 # How to 
