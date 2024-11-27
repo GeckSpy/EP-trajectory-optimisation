@@ -48,14 +48,23 @@ Optional :
 - métriques d'un processus :
     - temps d'entrainement 
     - mesure de l'énergie 
-    - es-ce que ça scale 
+    - es-ce que ça scale : pas de discretisation
     - mesure de la mémoire 
     - mesure du reward moyen
     - combien de temps pour terminer un tour 
     - over fitting ?
 
-
 - comparer avec vraie trajectoire 
+
+Méthodologie :
+- fixer un budget de temps :
+    - temps court : 10min
+    - temps long : 1h
+- On mesure : 
+    - cout de l'entrainement : temps, energie , mémoire
+    - performance du model : reward moyen, temps pour calculer la politique, mémoire du model 
+
+
 
 Conclusion :
 - limites , comment faire mieux 
