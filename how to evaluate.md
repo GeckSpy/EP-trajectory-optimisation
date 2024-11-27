@@ -62,7 +62,7 @@ Méthodologie :
     - temps long : 1h
 - On mesure : 
     - cout de l'entrainement : temps, energie , mémoire
-    - performance du model : reward moyen, temps pour calculer la politique, mémoire du model 
+    - performance du model : reward moyen, temps pour calculer la politique, mémoire du model , volatilité de l'entrainement
 
 
 
