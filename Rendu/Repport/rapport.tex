@@ -101,6 +101,7 @@ The goal of this project is split into five parts:
 \item Evalute the performances of Deep Q-learning depending of the hyperparameters.
 \item As a bonus: evaluate the performance of our best car's behaviour.
 }
+All the code have been made with python.
 
 	\part{Deep Q-learning}
 		\section{Markovian decision porcess}
@@ -119,7 +120,32 @@ The goal of this project is split into five parts:
 	
 	
 	\part{Car Racing environment}
+		\section{Tracks}
+A track is originally a .png file wich look like the left image of figure \ref{figure:track}. Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. After that, we crop the image, compute the starting point and the lines of track (that will be explained in the reward part) to have a final result which look the right image of figure \ref{figure:track}.
+\begin{center}
+\label{figure:track}
+	\begin{figure}[ht]
+		\refstepcounter{fig}
+		\centering
+		\includegraphics[width=5cm, height=4cm]{track_06.png}
+		\includegraphics[width=5cm, height=4cm]{track_06_computed.png}
+		\caption{\underline{.png and computed track}}
+	\end{figure}
+\end{center}
+
+	
 		\section{Cars' physics}
+The Car physic is really simple. It is a 2D cartoon-like physics that act as follow:\\
+The car has to main informations: its speed $\in [0,$ MaxSpeed$]$ and its rotation $\in [0,360]$. The physics is simple, at each times step, the car move to next coordinates on direction of the car's rotation and of a lenght equal to the car's speed.\\
+If the coordinates of the car is $(x,y)$, its speed is $s$ and its rotation is $\alpha$, then, after a time step, the coordinate of the car will be:
+\[(s.cos(\frac{\pi}{180}\alpha) + x,\; s.sin(\frac{\pi}{180}\alpha) + x)\]
+\\
+Moreover, at each time step, the car can make some actions:
+\mlist{
+\item it can accelerate, this will increase the car's speed by a constant
+\item it can brake, this will decrease the car's speed by reduce the car speed by a constant. The car cannot have a negative speed.
+\item it can turn, i.e. add a constant $\in \llbracket-K,K\rrbracket$ to its rotation. $K$ is a constant that is the maximum angle the car can turn per each time step.
+}
 		
 		\section{Technical aspects of the environment}
 		
