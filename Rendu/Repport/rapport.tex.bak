@@ -95,9 +95,9 @@ after upper={\par\hfill\textit{$\blacksquare $}}}
 	\part{Introduction}
 The goal of this project is split into five parts:
 \mlist{
-\item Creating racing car environment to simulate simple 2D racing car model.
+\item Creating racing car environment to simulate simple 2D racing car model
 \item Implementing Deep Q-learning and Genetic algorithms to optmize the behaviour of a car on trakcs so that the car can have the best trajectories possible.
-\item Evalute the performances of Deep Q-learning and Genetic algorithms and compare them.
+\item Evalute the performances of Deep Q-learning and Genetic and compare them.
 \item Evalute the performances of Deep Q-learning depending of the hyperparameters.
 \item As a bonus: evaluate the performance of our best car's behaviour.
 }
