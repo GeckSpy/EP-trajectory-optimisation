@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.4.5)  3 DEC 2024 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.4.5)  3 DEC 2024 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1513,12 +1513,12 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 108.
-<./images/track_06.png, id=116, 903.375pt x 602.25pt>
+<./images/track_06.png, id=120, 903.375pt x 602.25pt>
 File: ./images/track_06.png Graphic file (type png)
 <use ./images/track_06.png>
 Package pdftex.def Info: ./images/track_06.png  used on input line 114.
 (pdftex.def)             Requested size: 142.25475pt x 113.80379pt.
-<./images/track_06_computed.png, id=117, 526.96875pt x 460.72125pt>
+<./images/track_06_computed.png, id=121, 526.96875pt x 460.72125pt>
 File: ./images/track_06_computed.png Graphic file (type png)
 <use ./images/track_06_computed.png>
 Package pdftex.def Info: ./images/track_06_computed.png  used on input line 115
@@ -1531,7 +1531,7 @@ ex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}{/home/maceo/.miktex/texmfs/inst
 all/fonts/enc/dvips/lm/lm-ts1.enc}{/home/maceo/.miktex/texmfs/install/fonts/enc
 /dvips/lm/lm-mathit.enc}{/home/maceo/.miktex/texmfs/install/fonts/enc/dvips/lm/
 lm-rm.enc} <./images/track_06.png (PNG copy)> <./images/track_06_computed.png>]
-<./images/car_state.png, id=136, 304.13625pt x 187.70125pt>
+<./images/car_state.png, id=140, 304.13625pt x 187.70125pt>
 File: ./images/car_state.png Graphic file (type png)
 <use ./images/car_state.png>
 Package pdftex.def Info: ./images/car_state.png  used on input line 144.
@@ -1542,7 +1542,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2 <./images/car_state.png>]
-<./images/env_example.png, id=151, 691.58376pt x 549.05125pt>
+<./images/env_example.png, id=155, 691.58376pt x 549.05125pt>
 File: ./images/env_example.png Graphic file (type png)
 <use ./images/env_example.png>
 Package pdftex.def Info: ./images/env_example.png  used on input line 170.
@@ -1558,13 +1558,13 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 4D9ACF7B801817409F4442DC64651FBE;2487.
+(rerunfilecheck)             Checksum: 2C18FCE9FA34B5CEE200EADCBF8AEE8E;2612.
  ) 
 Here is how much of TeX's memory you used:
- 36228 strings out of 476527
- 743618 string characters out of 5797525
+ 36230 strings out of 476527
+ 743640 string characters out of 5797525
  1937530 words of memory out of 5000000
- 57504 multiletter control sequences out of 15000+600000
+ 57505 multiletter control sequences out of 15000+600000
  615634 words of font info for 103 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  93i,7n,99p,785b,563s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1581,9 +1581,9 @@ ic/lm/lmr8.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmtt10
 .pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/hoekwater/stmar
 y10.pfb>
-Output written on rapport.pdf (4 pages, 419406 bytes).
+Output written on rapport.pdf (4 pages, 421706 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
 
