@@ -121,22 +121,15 @@ All the code have been made with python.
 	
 	\part{Car Racing environment}
 		\section{Tracks}
-A track is originally a .png file wich look like\\
+A track is originally a .png file wich look like the left image of figure \ref{figure:track}. Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. After that, we crop the image, compute the starting point and the lines of track (that will be explained in the reward part) to have a final result which look the right image of figure \ref{figure:track}.
 \begin{center}
+\label{figure:track}
 	\begin{figure}[ht]
 		\refstepcounter{fig}
 		\centering
 		\includegraphics[width=5cm, height=4cm]{track_06.png}
-		\caption{\underline{.png track}}
-	\end{figure}
-\end{center}
-Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. After that, we crop the image, compute the starting point and the lines of track (that will be explained in the reward part) to have a final result which look like:
-\begin{center}
-	\begin{figure}[ht]
-		\refstepcounter{fig}
-		\centering
 		\includegraphics[width=5cm, height=4cm]{track_06_computed.png}
-		\caption{\underline{computed track}}
+		\caption{\underline{.png and computed track}}
 	\end{figure}
 \end{center}
 
@@ -153,8 +146,11 @@ Moreover, at each time step, the car can make some actions:
 \item it can brake, this will decrease the car's speed by reduce the car speed by a constant. The car cannot have a negative speed.
 \item it can turn, i.e. add a constant $\in \llbracket-K,K\rrbracket$ to its rotation. $K$ is a constant that is the maximum angle the car can turn per each time step.
 }
+The behaviour of the car will need to interact with the track therefore we need to decide what is the state of a car, i.e. how the car see the environment. We could give to our algorithms the track matrices, the informations of the car but this will leed to to many argument because a track can have size $900\times600$. Therefore we will need to train on all possible state wich will be at least $2^{900\times 600}$.
 		
 		\section{Technical aspects of the environment}
+To manipulate our environment, we use the python packages \texttt{gymnasium} which provide code convention for those type or environment, i.e. environment where at each time step, you have one action to do. The environment has to have some essential function: \texttt{reset()} that reset the environment to be able to do an other simulation, \texttt{render()} that render the current state of our environment and the most important one is \texttt{step()} that do one step of time, i.e. given an action, the \texttt{step()} function figure out is the car has crashed or not, move the carn to its next position and return the new state of the car, a reward and if the car has crashed.\\
+time
 		
 		\section{Rewards}
 	
