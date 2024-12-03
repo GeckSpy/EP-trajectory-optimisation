@@ -9,10 +9,18 @@
     - statistique
     - time to reach goal (finding cars that do at least one lap)
     - play with hyperparameters
+- Statistique
+    - best reward for each iteration
+    - average reward
 - power usage 
 - parallelisation 
 - memory usage
 - For GA: Markov gen modelisation -> no possible mixing time
+
+- For best car found:
+    - Average time to compute a track
+    - average speed
+    - Compare with real trajectory on some real circuit?
 
 
 autosuffisant 
@@ -22,7 +30,7 @@ autosuffisant
 
 ## Introduction 
 - what is the project ?
-présenter le pb , résumer ce que l'on vas faire, ce que l'on veut évaluer , méthodes
+présenter le pb , résumer ce que l'on vas faire, ce que l'on veut évaluer , méthodes (summary of proposal)
 
 ## Deep Q Learning 
 - What is Markovian decision process ?
@@ -31,11 +39,15 @@ présenter le pb , résumer ce que l'on vas faire, ce que l'on veut évaluer , m
 - What is Q learning ?
 
 Optional :
-- few words on alternatives to Q-learning 
+- few words on alternatives to Q-learning
+
+## Genetic algorithm
+- What is it?
+- Markov chain modelisation
 
 ## Car Racing environment 
 - What is the physics of the car ?
-- What are the main ideas/technical points behind the envorionment ?
+- What are the main ideas/technical points behind the envirionment ?
 - How do we compute reward ? Why this reward ?
 - Why this features ?
 
