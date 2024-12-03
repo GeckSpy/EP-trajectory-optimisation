@@ -103,22 +103,6 @@ The goal of this project is split into five parts:
 }
 All the code have been made with python.
 
-	\part{Deep Q-learning}
-		\section{Markovian decision porcess}
-		
-		\section{What is Q value?}
-		
-		\section{What is Q learning}
-
-	
-	\part{Genetic algorithms}
-		\section{What are genetic algorithms}
-		
-		\section{Markov Chain modelisation}
-		
-		\section{NEAT}
-	
-	
 	\part{Car Racing environment}
 		\section{Tracks}
 A track is originally a .png file wich look like the left image of figure \ref{figure:track}. Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. After that, we crop the image, compute the starting point and the lines of track (that will be explained in the reward part) to have a final result which look the right image of figure \ref{figure:track}.
@@ -157,14 +141,14 @@ Then, the representation looks like figure \ref{figure:car state}.
 	\begin{figure}[ht]
 		\refstepcounter{fig}
 		\centering
-		\includegraphics[width=5cm, height=4cm]{car_state.png}
+		\includegraphics[width=4cm, height=3cm]{car_state.png}
 		\caption{\underline{Car state}}
 	\end{figure}
 \end{center}
 		
 		\section{Technical aspects of the environment}
 To manipulate our environment, we use the python packages \texttt{gymnasium} which provide code convention for those type or environment, i.e. environment where at each time step, you have one action to do. The environment has to have some essential function: \texttt{reset()} that reset the environment to be able to do an other simulation, \texttt{render()} that render the current state of our environment and the most important one is \texttt{step()} that do one step of time, i.e. given an action, the \texttt{step()} function figure out is the car has crashed or not, move the carn to its next position and return the new state of the car, a reward and if the car has crashed.\\
-Our environment has a variable named \texttt{time} wich give us the opportunitie to discretise more or less or time.
+Our environment has a variable named \texttt{time} wich give us the opportunitie to discretise more or less the time.
 		
 		\section{Rewards}
 For those type of problem where the AI model has to compute a behaviour, the AI model produces something which look like a function $f$ that take a car state and return an action. We need to specifie to our AI model when it produce a good action and a bad action, for instance, if a car crash, we need to punish the AI model.\\
@@ -175,6 +159,48 @@ We do that thanks to a function reward implemented in the function \texttt{step(
 }
 For the positive reward, we have automatically computed some track line (represented in right image of figure \ref{figure:track}). If the car crosses next line, it has a reward of $+10\times$ the number of lines it has cross in the good order with this action. If the car cross a line in the wrong order, it means that it has gone backward, therefore, we punished the car with a reward of $-200$ and we stop the computation.\\
 On top of that, at each time step, we add to the current reward the speed of the car divided by a constant to encourage the car to go fast.
+
+		\section{Conclusion}
+After explaining all of this, here is an example in figure \ref{figure:env example}. We have plot the trajectory of the car, the green color is when the car has accelerate, red color when it brake and yellow otherwise.
+\begin{center}
+\label{figure:env example}
+	\begin{figure}[ht]
+		\refstepcounter{fig}
+		\centering
+		\includegraphics[width=6cm, height=5cm]{env_example.png}\\
+		list of rounded reward: \texttt{[10, 1, 2, 12, 13, 13, 13, 14, 24, 14, 13, 12, 13, -497]}
+		\caption{\underline{Car state}}
+	\end{figure}
+\end{center}
+The total reward of a car behaviour is the sum of all reward of a simulation with a car behaviour.
+
+	\part{Deep Q-learning}
+		\section{Markovian decision porcess}
+		
+		\section{What is Q value?}
+		
+		\section{What is Q learning}
+
+	
+	\part{Genetic algorithms}
+		\section{What are genetic algorithms?}
+Genetic algorithms (GA) are probabilistic algorithms based on natural selection. Therefore, GA takes some populations which are sets of solutions (here a solution is a car's behaviour), select the best solutions thanks to the reward function. Then, it changes the population by adding new random solutions, adding some mutations which are some small variations of a behaviour, adding some cross-over which are the equivalent of natural reproduction. We will repeat this process a fixed number of generations.
+		
+		\section{Markov Chain modelisation}
+We will now introduce a Markov chain modelisation to genetic algorithm.\\
+We define a markov chaine $(Y_n)_{n\in\mathbb{N}}$ as folowing:
+\mlist{
+\item A state of $(Y_n)_{n\in\mathbb{N}}$ is a population.
+\item Let $y_0$ be a special state such that if $Y_n = y_0$ then it means that the population of state $Y_n$ contain an optimal solution.
+}
+Now, the sequence of population of genetic algorithm can be discribe with this markov chains. $Y_n$ represent the population at generation $n$.\\
+Notice that the state $y_0$ is an absorbing state. In fact if $Y_n = y_0$ then it mean that $P_n[0]$ is optimal. Since we always kept the best solution of previous populations, it means that $\forall n'>n$, we have that $P_{n'}$ contain an optimal solution. Therefore, $\forall n'>n$, $Y_{n'} = y_0$. Moreover, $y_0$ is the only absorbing state of $(Y_n)_{n\in\mathbb{N}}$.\\
+\\
+If we suppose that our mutation and cross-over are made such that a solution $x$ can reach $y$ by a series of a finite number of those operations. Then, all solutions $x$ can reach an optimal value. Then every state $y_n$ can reach state $y_0$. The set of all possible state is finite.\\
+Then $\mathbb{P}(Y_n = y_0) \underset{n \rightarrow +\infty}{\rightarrow} 1$\\
+Then $\mathbb{P}($ The population $P_n$ contain an optimal solution$) \underset{n \rightarrow +\infty}{\rightarrow} 1$
+		
+		\section{NEAT}
 	
 	
 	\part{Performance Evaluation}
