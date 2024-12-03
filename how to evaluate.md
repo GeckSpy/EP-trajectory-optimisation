@@ -73,10 +73,16 @@ Méthodologie :
     - temps court : 10min
     - temps long : 1h
 - On mesure : 
-    - cout de l'entrainement : temps, energie , mémoire
-    - performance du model : reward moyen, temps pour calculer la politique, mémoire du model , volatilité de l'entrainement
+    - cout de l'entrainement : 
+        - temps : fixé a l'avance, pas besoin de le mesurer
+        - énergie : utiliser PyJoule 
+        - mémoire : ( nombre de paramètres du modèle)
+    - performance du model : 
+        - plot du reward par itération : X = temps , Y = reward à itération finissant au temps X
+        - temps pour calculer la politique 
+        - variance du reward par itération
 
 
 
 Conclusion :
-- limites , comment faire mieux 
+- limites, comment faire mieux 
