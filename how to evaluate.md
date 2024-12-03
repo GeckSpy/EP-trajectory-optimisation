@@ -82,7 +82,8 @@ Méthodologie :
         - temps pour calculer la politique 
         - variance du reward par itération
 
-
+How to evaluate the best car :
+- 
 
 Conclusion :
 - limites, comment faire mieux 
