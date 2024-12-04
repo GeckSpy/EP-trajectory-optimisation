@@ -1,0 +1,3 @@
+/var/lib/oar/.batch_job_bashrc: line 5: /home/mlongatt/.bashrc: No such file or directory
+/home/mlongatt/EP-trajectory-optimisation/generated data/env_06_Deep_Q_Learning.py:962: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:278.)
+  return torch.tensor([arr],dtype=torch.float)

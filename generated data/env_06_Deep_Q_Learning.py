@@ -866,7 +866,7 @@ Transition = namedtuple("Transition",["state","action","next_state","reward"])
 
 # For plots
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 from IPython import display
 
 # For saving files
