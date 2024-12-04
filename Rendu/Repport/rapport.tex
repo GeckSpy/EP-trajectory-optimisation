@@ -175,8 +175,20 @@ After explaining all of this, here is an example in figure \ref{figure:env examp
 The total reward of a car behaviour is the sum of all reward of a simulation with a car behaviour.
 
 	\part{Deep Q-learning}
-		\section{Markovian decision porcess}
-		
+		\section{Markovian decision process}
+
+		We want to describe the interaction between an agent and its environment.
+		In this report, a Markovian decision process is $(S,A,T,R)$ where :
+		\begin{description}
+			\item[$S$] is a set state in which our agent can be
+			\item[$A$] is the set of actions our agent can take : all actions $a \in A$ are available from every state $s \in S$
+			\item[$T$] is the transition function describing what is the next state of our agent after choicing one action : $T : S \times A \rightarrow S$
+			\item[$R$] is the reward function giving   
+		\end{description}
+		$S$ is a set state in which our agent can be,
+		$A$ is the set of actions our agent can take no matter what state it is in and $R$ a reward function 
+		that gives a reward $R(a,r)$
+ 		
 		\section{What is Q value?}
 		
 		\section{What is Q learning}
