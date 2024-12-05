@@ -62,7 +62,7 @@
 
 # ### Importing Packages
 
-# In[54]:
+# In[2]:
 
 
 import numpy as np
@@ -79,7 +79,7 @@ from datetime import datetime
 
 # ### Coor class
 
-# In[55]:
+# In[3]:
 
 
 class Coor():
@@ -121,7 +121,7 @@ class Coor():
 
 # Contrary to previous environment, track are not matrix anymore.
 
-# In[56]:
+# In[4]:
 
 
 def intersect(coorA,coorB,coorC,coorD):
@@ -145,7 +145,7 @@ def intersect(coorA,coorB,coorC,coorD):
 # plt.show()
 
 
-# In[57]:
+# In[5]:
 
 
 RED = [255, 0, 0]
@@ -354,7 +354,7 @@ class Track():
 
 # ### Creating tracks
 
-# In[58]:
+# In[6]:
 
 
 path = "../tracks/02.png"
@@ -413,7 +413,7 @@ basic_track = Track(create_track_info("../tracks/02.png"), nb_lines=2, l_bt_line
 # 
 # The format is the following: each lines contain four number a,b,c,d which reprenset point (a,b) and (c,d) of a line.
 
-# In[59]:
+# In[7]:
 
 
 from os import walk
@@ -499,7 +499,7 @@ TRACKS:list[Track] = create_tracks()
 #  - $v_x = v.cos(\alpha . \frac{\pi}{180})$
 #  - $v_y = v.sin(\alpha . \frac{\pi}{180})$
 
-# In[60]:
+# In[8]:
 
 
 """Constant"""
@@ -612,7 +612,7 @@ class Car():
 # 
 # Moreover, we have $N = 3\times 2K+1 = 6K+3$
 
-# In[61]:
+# In[9]:
 
 
 MAX_SPEED = 50
@@ -747,7 +747,7 @@ class RacingCar(Env):
 
 # ### Env example
 
-# In[62]:
+# In[10]:
 
 
 # env = RacingCar()
@@ -755,7 +755,7 @@ class RacingCar(Env):
 # env.track.plot(show_lines=True)
 
 
-# In[63]:
+# In[11]:
 
 
 # print(env.nb_state)
@@ -766,7 +766,7 @@ class RacingCar(Env):
 #         assert False
 
 
-# In[64]:
+# In[12]:
 
 
 # moves = [[Coor((60, 25)), Coor((100,28))],
@@ -787,7 +787,7 @@ class RacingCar(Env):
 # plt.plot()
 
 
-# In[65]:
+# In[13]:
 
 
 # env.reset(basic_track)
@@ -813,7 +813,7 @@ class RacingCar(Env):
 
 # # Reset example
 
-# In[66]:
+# In[14]:
 
 
 # Create the env
@@ -833,7 +833,7 @@ env.reset(TRACKS[id])
 env.close()
 
 
-# In[67]:
+# In[15]:
 
 
 # Essentials for training and env
@@ -861,12 +861,12 @@ from collections import namedtuple , deque
 Transition = namedtuple("Transition",["state","action","next_state","reward"])
 
 
-# In[68]:
+# In[16]:
 
 
 # For plots
 import matplotlib.pyplot as plt
-#get_ipython().run_line_magic('matplotlib', 'inline')
+#%matplotlib inline
 from IPython import display
 
 # For saving files
@@ -876,7 +876,7 @@ from datetime import datetime
 from torchsummary import summary
 
 
-# In[69]:
+# In[17]:
 
 
 class ReplayMemory():
@@ -896,7 +896,7 @@ class ReplayMemory():
         return len(self.memory_)
 
 
-# In[70]:
+# In[18]:
 
 
 class DQN(nn.Module):
@@ -927,7 +927,7 @@ class DQN(nn.Module):
         self.load_state_dict(torch.load(filename, weights_only=True))
 
 
-# In[71]:
+# In[19]:
 
 
 class Env():
@@ -1017,7 +1017,7 @@ class Env():
         return torch.tensor(action).reshape((1,1))
 
 
-# In[72]:
+# In[20]:
 
 
 def optimize(env : Env,optimizer,criterion,batch_size,discount_factor):
@@ -1057,7 +1057,7 @@ def optimize(env : Env,optimizer,criterion,batch_size,discount_factor):
     optimizer.step()
 
 
-# In[73]:
+# In[21]:
 
 
 def measure_policy_time(env) :
@@ -1067,14 +1067,14 @@ def measure_policy_time(env) :
     return time.perf_counter() - time_deb
 
 
-# In[74]:
+# In[22]:
 
 
 def measure_model_size(env):
     return sum(p.numel() for p in env.model.parameters())
 
 
-# In[75]:
+# In[23]:
 
 
 def evaluate_model_reward(env):
@@ -1091,7 +1091,7 @@ def evaluate_model_reward(env):
     return sum/( len(TRACKS) - env.track_for_training)
 
 
-# In[76]:
+# In[35]:
 
 
 def training(lr=1e-4,epsilon_decay=30.,batch_size = 40,time_bound = 60*(1),track_budget=int(0.8*len(TRACKS))):
@@ -1125,7 +1125,7 @@ def training(lr=1e-4,epsilon_decay=30.,batch_size = 40,time_bound = 60*(1),track
     #time_bound = 60*(1)
     time_start = time.perf_counter()
     i = 0
-    while (i < epochs and ( (time.perf_counter() - time_start <= time_bound)  )):
+    while ( (time.perf_counter() - time_start <= time_bound)  ):
         i += 1
         env.reset()
         epsilon = epsilon_min + (epsilon_max-epsilon_min)*np.exp(-i/epsilon_decay)
@@ -1178,6 +1178,10 @@ def training(lr=1e-4,epsilon_decay=30.,batch_size = 40,time_bound = 60*(1),track
     res["DQN_model_param"] = filename
     res["DQN_model_param_is_saved"] = False
 
+    res["learning rate"] = lr 
+    res["batch size"] = batch_size
+    res["epsilon decay"] = epsilon_decay
+
     minute = (int(time.perf_counter() - time_start)) //60
     if (minute > 3) :
          env.model.save(filename)
@@ -1190,20 +1194,20 @@ def training(lr=1e-4,epsilon_decay=30.,batch_size = 40,time_bound = 60*(1),track
     return res
 
 
-# In[77]:
+# In[36]:
 
 
 #res = training(time_bound=5)
 
 
-# In[78]:
+# In[37]:
 
 
 import json
 import os
 
 
-# In[79]:
+# In[38]:
 
 
 def par1_data():
@@ -1223,10 +1227,70 @@ def par1_data():
                 f.write(json_object)
 
 
-# In[80]:
+# In[39]:
 
 
-par1_data()
+def par2_data():
+    #training_times_min = [10,30,60]
+    training_time = 30*(60)
+    lr_l = [1e-2,1e-3,1e-4,1e-5,1e-6]
+    batch_size_l = [10,30,50,80,120]
+    epsilon_decay_l = [10.,30.,50.,120.,200.]
+    track_limit = int(0.8*len(TRACKS))
+
+    folder_name =  "run_part2_"+ datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    os.makedirs(folder_name)
+
+    for par in lr_l :
+        json_object = json.dumps( training(lr=par, track_budget=track_limit , time_bound=training_time ))
+        with open(folder_name + "/" + "lr"+"_"+str(par)+".json","w") as f :
+            f.write(json_object)
+
+    for par in batch_size_l :
+        json_object = json.dumps( training(batch_size=par, track_budget=track_limit , time_bound=training_time ))
+        with open(folder_name + "/" + "batch_size"+"_"+str(par)+".json","w") as f :
+            f.write(json_object)
+
+    for par in epsilon_decay_l :
+        json_object = json.dumps( training(epsilon_decay=par, track_budget=track_limit , time_bound=training_time ))
+        with open(folder_name + "/" + "epsilon_decay"+"_"+str(par)+".json","w") as f :
+            f.write(json_object)
+
+    # for t in training_times_sec :
+    #     for n_track in track_limit :
+    #         json_object = json.dumps( training(time_bound=t,track_budget=n_track))
+    #         with open(folder_name + "/" + str(t)+"_"+str(n_track)+".json","w") as f :
+    #             f.write(json_object)
+
+
+# In[46]:
+
+
+def par3_data():
+    #training_times_min = [10,30,60]
+    training_times = (60)*(60)*6
+    track_limit = int(0.8*len(TRACKS))
+    #track_limit = [10]
+    folder_name =  "run_part3_"+ datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    os.makedirs(folder_name)
+    json_object = json.dumps( training(time_bound=training_times,track_budget=track_limit, lr=1e-5 , epsilon_decay=500.))
+    with open(folder_name + "/" + "long training"+".json","w") as f :
+        f.write(json_object)
+            
+
+
+# In[ ]:
+
+
+par2_data() 
+#par1_data()
+#par3_data()
+
+
+# In[ ]:
+
+
+#par1_data()
 
 # for key, value in res.items() :
 #     print(key," ",value)
@@ -1248,4 +1312,42 @@ par1_data()
 # with open("run_part1_2024-12-03_20:50:34/360_10.json") as f :
 #     dic = json.load(f)
 # print(dic)
+
+
+
+# In[ ]:
+
+
+def playing(env):
+    sum = 0
+    max_step = 300
+    for i in range(70,len(TRACKS)) :
+        env.state_gym , _ = env.env.reset(TRACKS[i])
+        env.done = False
+        i = 0
+        while(i < max_step and not(env.done)) :
+            i+=1
+            transition = env.step( env.policy() )
+            sum += transition.reward.item()
+            env.show_state()
+    return sum/( len(TRACKS) - 70)
+
+
+# In[ ]:
+
+
+# env = Env()
+# env.track_for_training = len(TRACKS)
+# with open("run_part1_2024-12-03_23:09:23/3600_69.json") as f :
+#     dic = json.load(f)
+# env.model.load(dic["DQN_model_param"])
+# # playing(env)
+# plt.plot(dic["reward_history"])
+# print(dic["global_volatility"])
+
+
+# In[ ]:
+
+
+
 
