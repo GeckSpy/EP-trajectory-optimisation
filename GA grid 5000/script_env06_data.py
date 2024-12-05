@@ -748,7 +748,7 @@ def training(do_save=False,
 
 
 def compute_data():
-    liste_training_time_min = [0.1]#10, 40, 60]
+    liste_training_time_min = [10, 40, 60]
     liste_training_time_sec = [60*x for x in liste_training_time_min]
 
     nb_track_training = [8, 40, int(0.8*len(TRACKS))]
