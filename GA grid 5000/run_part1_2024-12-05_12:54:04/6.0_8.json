@@ -1,0 +1,1 @@
+{"training_time": 6.0, "track_number": 8, "Config_path": "./RacingCar.config", "best_policy_path": "run_part1_2024-12-05_12:54:04/best_genome_6.0sec_8tracks", "is_saved": true, "reward_history": [-224.45999999999998], "reward_time": [16.427647854026873], "global_volatility": 0.0, "model_size": 81, "policy_time": 5.936599336564541e-05, "policy_score": -3300.0}
