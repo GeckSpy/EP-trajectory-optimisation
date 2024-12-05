@@ -175,23 +175,28 @@ After explaining all of this, here is an example in figure \ref{figure:env examp
 The total reward of a car behaviour is the sum of all reward of a simulation with a car behaviour.
 
 	\part{Deep Q-learning}
-		\section{Markovian decision process}
 
+		\section{Markovian decision process}
 		We want to describe the interaction between an agent and its environment.
 		In this report, a Markovian decision process is $(S,A,T,R)$ where :
 		\begin{description}
 			\item[$S$] is a set state in which our agent can be
 			\item[$A$] is the set of actions our agent can take : all actions $a \in A$ are available from every state $s \in S$
-			\item[$T$] is the transition function describing what is the next state of our agent after choicing one action : $T : S \times A \rightarrow S$
-			\item[$R$] is the reward function giving   
+			\item[$T$] is the transition function describing what is the next state of our agent after choosing one action : $T : S \times A \rightarrow S$
+			\item[$R$] is the reward function giving   $R(s,a,s')$ if we go to $s'$ from $s$ by choosing action $a$
 		\end{description}
-		$S$ is a set state in which our agent can be,
-		$A$ is the set of actions our agent can take no matter what state it is in and $R$ a reward function 
-		that gives a reward $R(a,r)$
  		
-		\section{What is Q value?}
+		\section{Q value}
+
+		We can associate to a state a value that reflect the best cumulative reward that we can obtain 
+		in the long run if a choose actions optimaly starting from its state. We call this value the Q-value of the state : $Q^*(s)$.
+
+		\section{Deep Q-Learning}
+
+		Deep Q-Learning is an algoirthm that aims at approximating $Q^*$ using a neural network.
+
 		
-		\section{What is Q learning}
+
 
 	
 	\part{Genetic algorithms}
