@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.4.5)  6 DEC 2024 09:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.4.5)  6 DEC 2024 09:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1506,22 +1506,22 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 94.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-04.
+06.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 113.
-<./images/track_06.png, id=112, 903.375pt x 602.25pt>
+(Font)              <10.95> on input line 115.
+<./images/track_06.png, id=124, 903.375pt x 602.25pt>
 File: ./images/track_06.png Graphic file (type png)
 <use ./images/track_06.png>
-Package pdftex.def Info: ./images/track_06.png  used on input line 119.
+Package pdftex.def Info: ./images/track_06.png  used on input line 121.
 (pdftex.def)             Requested size: 142.25475pt x 113.80379pt.
-<./images/track_06_computed.png, id=113, 526.96875pt x 460.72125pt>
+<./images/track_06_computed.png, id=125, 526.96875pt x 460.72125pt>
 File: ./images/track_06_computed.png Graphic file (type png)
 <use ./images/track_06_computed.png>
-Package pdftex.def Info: ./images/track_06_computed.png  used on input line 120
+Package pdftex.def Info: ./images/track_06_computed.png  used on input line 122
 .
 (pdftex.def)             Requested size: 142.26738pt x 113.80917pt.
  [1
@@ -1531,31 +1531,31 @@ ex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}{/home/maceo/.miktex/texmfs/inst
 all/fonts/enc/dvips/lm/lm-ts1.enc}{/home/maceo/.miktex/texmfs/install/fonts/enc
 /dvips/lm/lm-mathit.enc}{/home/maceo/.miktex/texmfs/install/fonts/enc/dvips/lm/
 lm-rm.enc} <./images/track_06.png (PNG copy)> <./images/track_06_computed.png>]
-<./images/car_state.png, id=133, 304.13625pt x 187.70125pt>
+<./images/car_state.png, id=145, 304.13625pt x 187.70125pt>
 File: ./images/car_state.png Graphic file (type png)
 <use ./images/car_state.png>
-Package pdftex.def Info: ./images/car_state.png  used on input line 149.
+Package pdftex.def Info: ./images/car_state.png  used on input line 151.
 (pdftex.def)             Requested size: 113.80948pt x 85.35837pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-55.
+57.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2 <./images/car_state.png>]
-<./images/env_example.png, id=148, 691.58376pt x 549.05125pt>
+<./images/env_example.png, id=160, 691.58376pt x 549.05125pt>
 File: ./images/env_example.png Graphic file (type png)
 <use ./images/env_example.png>
-Package pdftex.def Info: ./images/env_example.png  used on input line 175.
+Package pdftex.def Info: ./images/env_example.png  used on input line 177.
 (pdftex.def)             Requested size: 170.7111pt x 142.26404pt.
-
-Overfull \hbox (14.59424pt too wide) in paragraph at lines 205--206
+ [3 <./images/env_example.png>]
+Overfull \hbox (14.59424pt too wide) in paragraph at lines 207--208
 []\T1/lmr/bx/n/10.95 Replay Buffer\T1/lmr/m/n/10.95 : A memory that stores past
  experiences $\U/matha/m/n/10.95 p\OML/lmm/m/it/10.95 s; a; r; s[]\U/matha/m/n/
 10.95 q$\T1/lmr/m/n/10.95 . Randomly sampling experiences
  []
 
-[3 <./images/env_example.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 231--237
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
 
  []
 
@@ -1565,16 +1565,16 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 889234CB0C92770BD7E8CB13B98075B8;2265.
+(rerunfilecheck)             Checksum: 81C6626E2E284A13A8B7923E37A83841;2690.
  ) 
 Here is how much of TeX's memory you used:
- 36237 strings out of 476527
- 744051 string characters out of 5797525
+ 36244 strings out of 476527
+ 744188 string characters out of 5797525
  1938530 words of memory out of 5000000
- 57507 multiletter control sequences out of 15000+600000
- 610902 words of font info for 101 fonts, out of 8000000 for 9000
+ 57511 multiletter control sequences out of 15000+600000
+ 613900 words of font info for 102 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 93i,7n,99p,784b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,7n,99p,784b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/maceo/.miktex/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi600/matha
 6.pk> </home/maceo/.miktex/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi600/ma
 tha8.pk> </home/maceo/.miktex/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi657
@@ -1589,9 +1589,9 @@ lic/lm/lmr17.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmr8
 e/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb></home/maceo/.m
 iktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/mace
 o/.miktex/texmfs/install/fonts/type1/public/hoekwater/stmary10.pfb>
-Output written on rapport.pdf (5 pages, 471063 bytes).
+Output written on rapport.pdf (5 pages, 475082 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 285 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
+ 337 words of extra memory for PDF output out of 10000 (max. 10000000)
 
