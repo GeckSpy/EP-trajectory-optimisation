@@ -222,6 +222,10 @@ Basic genetic algorithms are not efficient enought to compute an optimize behavi
 	
 	
 	\part{Performance Evaluation}
+	Once the models are selected (in this case, Deep Q-Learning and Genetic Algorithms), the next step is to compare them using various metrics. For this purpose, we choose the following metric: the average reward after training.
+
+We measure this value across different training durations and varying numbers of tracks used for training the models. To ensure robustness and evaluate potential overfitting, we test the models on tracks that were not included in the training set. \\
+This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. The goal is for the cars to complete laps as quickly as possible, and the average reward reflects their performance under these conditions.
 		\section{GA VS Q}
 		
 		\section{Q hyperparameter}
