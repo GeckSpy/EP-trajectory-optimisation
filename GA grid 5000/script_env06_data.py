@@ -479,7 +479,8 @@ class RacingCar(Env):
     def __init__(self):
         super(RacingCar, self).__init__()
         # time between two frames
-        self.time = 0.9 #Change this variable to "discretiser" the time. Lower value means more discretisation
+        # Basic value: 0.9
+        self.time = 0.2 #Change this variable to "discretiser" the time. Lower value means more discretisation
 
         self.max_turn = int(MAX_TURN * self.time)
         self.nb_state = 6*self.max_turn + 3
@@ -588,7 +589,7 @@ class RacingCar(Env):
             reward += 10
             self.id_line_goal = (self.id_line_goal + 1) % (len(self.track.lines))
 
-        reward -= 1
+        reward -= 1*(env.time)
         return self.get_state(), reward, is_done, has_crashed, []
     
     def random_action(self, p_accel=0.25, p_brake=0.25, p_turn=0.5):
