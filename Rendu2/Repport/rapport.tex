@@ -24,110 +24,6 @@
 \usepackage{mathabx}
 \usepackage{stmaryrd}
 
-\usepackage{tikz}     % Un package pour les dessins (utilisé pour l'environnement {code})
-\usepackage[framemethod=TikZ]{mdframed}
-\newenvironment{code}{%
-\begin{mdframed}[linecolor=Green,innerrightmargin=30pt,innerleftmargin=30pt,
-backgroundcolor=Black!5,
-skipabove=10pt,skipbelow=10pt,roundcorner=5pt,
-splitbottomskip=6pt,splittopskip=12pt]
-}{%
-\end{mdframed}
-}
-
-\begin{filecontents*}{Annexe 1}
-[NEAT]
-fitness_criterion     = max
-fitness_threshold     = 10000
-pop_size              = 500
-reset_on_extinction   = False
-
-[DefaultGenome]
-# node activation options
-activation_default      = tanh
-activation_mutate_rate  = 0.2
-activation_options      = sigmoid tanh relu
-
-# node aggregation options
-aggregation_default     = sum
-aggregation_mutate_rate = 0.0
-aggregation_options     = sum
-
-# node bias options
-bias_init_mean          = 0.0
-bias_init_stdev         = 1.0
-bias_max_value          = 30.0
-bias_min_value          = -30.0
-bias_mutate_power       = 0.5
-bias_mutate_rate        = 0.7
-bias_replace_rate       = 0.1
-
-# genome compatibility options
-compatibility_disjoint_coefficient = 1.0
-compatibility_weight_coefficient   = 0.5
-
-# connection add/remove rates
-conn_add_prob           = 0.5
-conn_delete_prob        = 0.3
-
-# connection enable options
-enabled_default         = True
-enabled_mutate_rate     = 0.01
-
-feed_forward            = True
-initial_connection      = full
-#full_nodirect
-
-# node add/remove rates
-node_add_prob           = 0.2
-node_delete_prob        = 0.2
-
-# network parameters
-num_hidden              = 0
-num_inputs              = 8
-num_outputs             = 9
-
-# node response options
-response_init_mean      = 1.0
-response_init_stdev     = 0.0
-response_max_value      = 30.0
-response_min_value      = -30.0
-response_mutate_power   = 0.0
-response_mutate_rate    = 0.0
-response_replace_rate   = 0.0
-
-# connection weight options
-weight_init_mean        = 0.0
-weight_init_stdev       = 1.0
-weight_max_value        = 30
-weight_min_value        = -30
-weight_mutate_power     = 0.5
-weight_mutate_rate      = 0.8
-weight_replace_rate     = 0.1
-
-[DefaultSpeciesSet]
-compatibility_threshold = 3.0
-
-[DefaultStagnation]
-species_fitness_func = max
-max_stagnation       = 15
-species_elitism      = 3
-
-[DefaultReproduction]
-elitism            = 3
-survival_threshold = 0.2
-\end{filecontents*}
-\begin{filecontents*}{Annexe 2}
-    batch_size = 40
-    epochs = 5000
-    max_episode_duration = 1000 * 1/env.env.time
-    epsilon_max = 1
-    epsilon_min = 0.01
-    epsilon_decay = 30.
-    lr = 1e-4
-    discount_factor = 0.9
-    self.model = DQN(400,8,self.n_action)
-\end{filecontents*}
 \usepackage[most]{tcolorbox}
 \newtcolorbox[auto counter]{definition}[1]{colframe=red!75!black, coltitle=white, enhanced, frame empty, colback=white,fonttitle=\bfseries , title=Def \thetcbcounter$\;$: #1, borderline west={2pt}{0pt}{red!85!black},
 attach boxed title to top left={xshift=-5mm}, boxed title style={colback=red!75!black}}
@@ -201,7 +97,7 @@ after upper={\par\hfill\textit{$\blacksquare $}}}
 
 	\section*{Abstract}
 
-The project is divided into five parts:
+The goal of this project is divided into five parts:
 \mlist{
 \item Creating a racing car environment to simulate a simple 2D racing car model.
 \item Implementing Deep Q-Learning and Genetic Algorithms to optimize the behavior of a car on tracks, enabling it to follow the best possible trajectories.
@@ -209,12 +105,11 @@ The project is divided into five parts:
 \item Assessing the performance of Deep Q-Learning with respect to different hyperparameters.
 \item Evaluating the performance of the best car behavior achieved by both algorithms.
 }
-You can see the complete project on our public \href{https://github.com/GeckSpy/EP-trajectory-optimisation}{Github page}.
+You can see the complete project on our public \href{https://github.com/GeckSpy/EP-trajectory-optimisation}{github page}.
 % All the code has been developed in Python.
 
 	\section*{Introduction}
-
-       We focus on solving the problem of optimizing a car's trajectory using a Deep Q-Learning model. The goal is to assess the ability of this model to generalize its experience from a limited number of circuits to new ones. To achieve this, we consider the car's trajectory in a plane under a simplified physics model. The model's performance will be compared to that of a genetic algorithm. Then, we will examine the impact of the chosen hyperparameters on the model's training performance. Finally, we will explore the model's limitations when trained on a large amount of data.
+	motivation
 
 	\section*{Modeling}
 		\subsection*{Racing environment}
@@ -274,7 +169,7 @@ We do that thanks to a function reward implemented in the function \texttt{step(
 For the positive reward, we have automatically computed some track line (represented in right image of figure \ref{figure:track}). If the car crosses next line, it has a reward of $(+10\times$ the number of lines it has cross in the good order with this action). If the car cross a line in the wrong order, it means that it has gone backward, therefore, we punished the car with a reward of $-200$ and we stop the computation.\\
 On top of that, at each time step, we add to the current reward the speed of the car divided by a constant to encourage the car to go fast.
 
-			\subsubsection*{An example of a car on a track}
+			\subsubsection*{Conclusion}
 After explaining all of this, here is an example in figure \ref{figure:env example}. We have plot the trajectory of the car, the green color is when the car has accelerate, red color when it brake and yellow otherwise.
 \begin{center}
 \label{figure:env example}
@@ -325,7 +220,7 @@ Where:
 	
 		\subsection*{Genetic algorithms}
 			\subsubsection*{What are genetic algorithms?}
-Genetic algorithms (GA) are probabilistic algorithms based on natural selection. Therefore, GA takes some populations which are sets of solutions (here a solution is a car's behavior), select the best solutions thanks to the reward function. Then, it changes the population by adding new random solutions, adding some mutations which are some small variations of a behavior, adding some cross-over which are the equivalent of natural reproduction. We can either repeat this process a fixed number of generations or for a fixed amount of time.
+Genetic algorithms (GA) are probabilistic algorithms based on natural selection. Therefore, GA takes some populations which are sets of solutions (here a solution is a car's behaviour), select the best solutions thanks to the reward function. Then, it changes the population by adding new random solutions, adding some mutations which are some small variations of a behaviour, adding some cross-over which are the equivalent of natural reproduction. We can either repeat this process a fixed number of generations or for a fixed amount of time.
 		
 			\subsubsection*{Markov Chain modelisation}
 We will now introduce a Markov chain modelisation to genetic algorithm. We define a Markov chain $(Y_n)_{n\in\mathbb{N}}$ as following:
@@ -345,99 +240,30 @@ Basic genetic algorithms are not efficient enough to compute an optimize behavio
 	
 	
 	\section*{Simulation}
-Once we completed the modeling of the environment, the deep Q-learning algorithm and the genetic algorithm, we have to compute some simulation to process evaluation performance. We will compare our two algorithms using various metrics. For this purpose, we choose the following metric: the average reward after training depending of some parameter, we call it the score of a training. We measure this value across different training durations and varying the numbers of tracks used to training the models. To ensure robustness and evaluate potential over-fitting, we test the models on tracks that were not included in the training set.\\
-This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. The goal is for the cars to complete laps as quickly as possible, and the average reward reflects their performance under these conditions. We used \href{https://www.grid5000.fr}{Grid5000} to train our model for reproducibility, to have a stable computer and to be able to run our different algorithm on a computer with the same configuration and computation power.
+Once we completed the modeling of the environment, the deep Q-learning algorithm and the genetic algorithm, we have to compute some simulation to process evaluation performance. We will compare our two algorithm using various metrics. For this purpose, we choose the following metric: the average reward after training depending of some parameter. We measure this value across different training durations and varying the numbers of tracks used to training the models. To ensure robustness and evaluate potential over-fitting, we test the models on tracks that were not included in the training set.\\
+This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. The goal is for the cars to complete laps as quickly as possible, and the average reward reflects their performance under these conditions. We used \textbf{grid5000} to train our model. First for research reproducibility, to have stable computer and to have access to strong GPUs.
 \mlist{
-\item First, we will compare genetic algorithm to Q-learning depending of the training time and the number of tracks used to train the car. We we train our algorithms during $10$ to $60$ minutes and with $10$ to $67$ tracks (which represent $80\%$ of the total number of tracks created).
-\item Then, we will compare the result of deep Q-learning depending of some hyper-parameters which are, the goal here is to be able to find the hyper-parameters that fit the most the situation, and for us this evaluation is only possible by running the algorithms with different parameters.
-\item Finally, we will evaluate the performance or the best car we found using deep Q-learning with a training of six hours, with the best hyper-parameters.
+\item First, we will compare genetic algorithm to Q-learning depending of the training time and the number of track used to train the car. We we train our algorithms during 10 to 60 minutes and with 10 to 67 tracks.
+\item Then, we compare the result of deep Q-learning depending of some hyper-parameters.
+\item Finally, we will evaluate the performance or the best car we found using deep Q-learning with a training of six hours.
 }
 
     \section*{Experimental}
-All the computations presented in this section were performed on the \href{https://www.grid5000.fr}{Grid5000} infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions, as they were carried out on machines with equivalent performance.
+DES BEAUX PLOT LOUISON JE T'EN SUPPLIE
 
-		\subsection*{Comparison between Deep Q-Learning and Genetic Algorithm}
-        Firstly, our goal was to be able to compare the different models we tried to use to train the car, in order to do that, we choose to give a certain time and a certain amount of tracks for the different models. The models were allowed to be training for this amount of time on \href{https://www.grid5000.fr}{Grid5000}. \\
-        We choose to evaluate the models on these metrics because we believed that they were the most important in the training of such AI. Indeed, these metrics allow the users to have an idea on how powerful can the models be. \\
-        As said before, we choose to evaluate the average reward on tracks on which the car has not trained, we believed it is the most relevant way to evaluate the training because it allows us to evaluate if there is over-fitting or not and this represent how much the car is doing well on the track. \\
-        \\
-        Since the training can be long to have satisfying result, we choose to concentrate ourselves on the following durations : $\{10;40;60\}$ (mins) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluate these trainings on $20$ tracks that are not in the training set. \\
-        \\
-        The two models are run with specific hyper-parameters for this section that are described in the final section \pageref{Hyperparameters}. \\
-        Here are the results :\\
-        \begin{figure}[h]
-            \centering
-            \includegraphics[scale = 0.65]{graphe_comparaison.png}
-            \caption*{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
-            \label{fig:enter-label}
-        \end{figure}
+		\subsection*{Comparing Genetic Algorithm and Deep Q-Learning }
+metrics: GA VS Q: training time : 10, 40, 60, number of tracks: 10, 40, 0.8 times number of tracks
 
-        We can notice that the Deep-Q algorithm outperform the Genetic algorithm for every test. \\
-        We can also notice that sometimes the use of more time or more tracks can lower the performance. \\ 
-        This can be due to over-fitting. \\
-        \\
-        To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. \\
-        In order for the algorithm to perform efficiently, we want it to to have low standard deviation.
-        \begin{figure}[h]
-            \centering
-            \includegraphics[scale = 0.55]{comparaison3.png}
-            \caption*{Standard deviation after training}
-            \label{fig:enter-label}
-        \end{figure}
-        \newpage
-        Finally, we can look at the evolution of the reward for the Deep Q learning for $60$ minutes of training on $6z$ tracks to have an idea the possible over-fitting happening for this training. \\
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.5\linewidth]{graphe_reward.png}
-            \caption{Evolution of the reward}
-            \label{fig:enter-label}
-        \end{figure}
-        We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting. \\
-		\subsection*{Influence of Hyper-parameters on Deep Q-Learning}
-		Focusing on the Deep Q algorithm, we can ask ourselves what are the best hyper-parameters. \\
-        We focused on $3$ hyper-parameters that we perceived as more important in our model : \\
-        \begin{itemize}
-            \item Batch size : this is the number of samples that are kept in memory between each step of the training. 
-            \item Lr (learning rate) : this is the velocity at which the neural network update the weights. 
-            \item Epsilon Decay : this is the probability that the model will try to explore new ways. 
-        \end{itemize}
-        We get the following results :
-        \begin{figure}[h]
-            \centering
-            \includegraphics[scale = 0.46]{comparaison2.png}
-            \caption*{Evolution of the score after fluctuating hyper-parameters}
-            \label{fig:enter-label}
-        \end{figure}
-        These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example for batch size, we want to have a batch size of $60$ in order to be efficient.
-		\subsection*{Best Car: performances of a model trained for few hours }
-        We can now look at the performance of the best car, it is chosen on how efficient it is on the tracks. \\
-        Firstly, as seen in part one, training for too long on a reduced amount of tracks can lead to over-fitting, we have been able to see this also by training a model for $6$ hours in the same conditions as the other. This model performs way less than the others. \\
-        We choose the Hyper-parameters chosen due to part 2 and the time and number of tracks that maximise the score. \\
-        Here is the evolution of the car on a map : 
-        \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.5\linewidth]{image.png}
-            \caption{Evolution of the best car}
-            \label{fig:enter-label}
-        \end{figure}
-    
-    
+		
+		\subsection*{Deep Q-Learning Hyper Parameter}
+		
+		\subsection*{Best Car}
+
+	
+
+
+
     \section*{Conclusion}
+	
 
-\newpage
-\section*{Annexes}
-\subsection*{Reproducibility}
-This section store the data necessary to reproduce the experiments : \\
-\subsubsection*{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
-Hyper-parameters for the genetic algorithm for part 1.
-\begin{code}
-    \tiny{
-\lstinputlisting{Annexe 1}}
-\end{code}
-\label{Hyperparameters}
-Hyper-parameters for the Deep Q learning algorithm for part 1.
-\begin{code}
-    \tiny{
-\lstinputlisting{Annexe 2}}
-\end{code}
 \end{document}
