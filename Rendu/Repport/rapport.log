@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.4.5)  6 DEC 2024 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.4.5)  9 DEC 2024 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -249,6 +249,28 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count277
 \enitdp@description=\count278
 )
+(/home/maceo/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(/home/maceo/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
 (/home/maceo/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfpages.sty
 Package: pgfpages 2011/01/05 ver 0.02
 
@@ -266,10 +288,7 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(/home/maceo/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-))
+)
 \Gin@req@height=\dimen147
 \Gin@req@width=\dimen148
 )
@@ -340,25 +359,7 @@ File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/home/maceo/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
-
-(/home/maceo/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 227.
-
-(/home/maceo/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
-Package xcolor Info: Model `RGB' extended on input line 1369.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
-)
+))
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
@@ -934,9 +935,7 @@ Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
-(/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
-
+(/home/maceo/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
 (/home/maceo/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
@@ -958,41 +957,7 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 (/home/maceo/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/home/maceo/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
-Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks39
-\verbatim@line=\toks40
-\verbatim@in@stream=\read4
-)
-(/home/maceo/.miktex/texmfs/install/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/home/maceo/.miktex/texmfs/install/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box63
-\tcb@upperbox=\box64
-\tcb@lowerbox=\box65
-\tcb@phantombox=\box66
-\c@tcbbreakpart=\count319
-\c@tcblayer=\count320
-\c@tcolorbox@number=\count321
-\l__tcobox_tmpa_box=\box67
-\l__tcobox_tmpa_dim=\dimen271
-\tcb@temp=\box68
-\tcb@temp=\box69
-\tcb@temp=\box70
-\tcb@temp=\box71
-
-(/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbraster.code.tex
-Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
-\c@tcbrastercolumn=\count322
-\c@tcbrasterrow=\count323
-\c@tcbrasternum=\count324
-\c@tcbraster=\count325
-) (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
-(/home/maceo/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
 (/home/maceo/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
 (/home/maceo/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex)
@@ -1000,10 +965,10 @@ Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen272
-\pgffor@skip=\dimen273
-\pgffor@stack=\toks41
-\pgffor@toks=\toks42
+\pgffor@iter=\dimen271
+\pgffor@skip=\dimen272
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 ))
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1012,39 +977,205 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count326
-\pgfplotmarksize=\dimen274
+\pgf@plot@mark@count=\count319
+\pgfplotmarksize=\dimen273
 )
-\tikz@lastx=\dimen275
-\tikz@lasty=\dimen276
-\tikz@lastxsaved=\dimen277
-\tikz@lastysaved=\dimen278
-\tikz@lastmovetox=\dimen279
-\tikz@lastmovetoy=\dimen280
-\tikzleveldistance=\dimen281
-\tikzsiblingdistance=\dimen282
-\tikz@figbox=\box72
-\tikz@figbox@bg=\box73
-\tikz@tempbox=\box74
-\tikz@tempbox@bg=\box75
-\tikztreelevel=\count327
-\tikznumberofchildren=\count328
-\tikznumberofcurrentchild=\count329
-\tikz@fig@count=\count330
+\tikz@lastx=\dimen274
+\tikz@lasty=\dimen275
+\tikz@lastxsaved=\dimen276
+\tikz@lastysaved=\dimen277
+\tikz@lastmovetox=\dimen278
+\tikz@lastmovetoy=\dimen279
+\tikzleveldistance=\dimen280
+\tikzsiblingdistance=\dimen281
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count320
+\tikznumberofchildren=\count321
+\tikznumberofcurrentchild=\count322
+\tikz@fig@count=\count323
 
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count331
-\pgfmatrixcurrentcolumn=\count332
-\pgf@matrix@numberofcolumns=\count333
+\pgfmatrixcurrentrow=\count324
+\pgfmatrixcurrentcolumn=\count325
+\pgf@matrix@numberofcolumns=\count326
 )
-\tikz@expandcount=\count334
+\tikz@expandcount=\count327
 
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(/home/maceo/.miktex/texmfs/install/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
+(/home/maceo/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-11-01 L3 programming layer (loader) 
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count328
+\l__pdf_internal_box=\box67
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+) (/home/maceo/.miktex/texmfs/install/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/zref/zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+
+(/home/maceo/.miktex/texmfs/install/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count329
+Package zref Info: New property: abspage on input line 67.
+)
+(/home/maceo/.miktex/texmfs/install/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip60
+\c@mdf@globalstyle@cnt=\count330
+\mdf@skipabove@length=\skip61
+\mdf@skipbelow@length=\skip62
+\mdf@leftmargin@length=\skip63
+\mdf@rightmargin@length=\skip64
+\mdf@innerleftmargin@length=\skip65
+\mdf@innerrightmargin@length=\skip66
+\mdf@innertopmargin@length=\skip67
+\mdf@innerbottommargin@length=\skip68
+\mdf@splittopskip@length=\skip69
+\mdf@splitbottomskip@length=\skip70
+\mdf@outermargin@length=\skip71
+\mdf@innermargin@length=\skip72
+\mdf@linewidth@length=\skip73
+\mdf@innerlinewidth@length=\skip74
+\mdf@middlelinewidth@length=\skip75
+\mdf@outerlinewidth@length=\skip76
+\mdf@roundcorner@length=\skip77
+\mdf@footenotedistance@length=\skip78
+\mdf@userdefinedwidth@length=\skip79
+\mdf@needspace@length=\skip80
+\mdf@frametitleaboveskip@length=\skip81
+\mdf@frametitlebelowskip@length=\skip82
+\mdf@frametitlerulewidth@length=\skip83
+\mdf@frametitleleftmargin@length=\skip84
+\mdf@frametitlerightmargin@length=\skip85
+\mdf@shadowsize@length=\skip86
+\mdf@extratopheight@length=\skip87
+\mdf@subtitleabovelinewidth@length=\skip88
+\mdf@subtitlebelowlinewidth@length=\skip89
+\mdf@subtitleaboveskip@length=\skip90
+\mdf@subtitlebelowskip@length=\skip91
+\mdf@subtitleinneraboveskip@length=\skip92
+\mdf@subtitleinnerbelowskip@length=\skip93
+\mdf@subsubtitleabovelinewidth@length=\skip94
+\mdf@subsubtitlebelowlinewidth@length=\skip95
+\mdf@subsubtitleaboveskip@length=\skip96
+\mdf@subsubtitlebelowskip@length=\skip97
+\mdf@subsubtitleinneraboveskip@length=\skip98
+\mdf@subsubtitleinnerbelowskip@length=\skip99
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/mdframed/md-frame-1.mdf
+File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
+)
+\mdf@frametitlebox=\box68
+\mdf@footnotebox=\box69
+\mdf@splitbox@one=\box70
+\mdf@splitbox@two=\box71
+\mdf@splitbox@save=\box72
+\mdfsplitboxwidth=\skip100
+\mdfsplitboxtotalwidth=\skip101
+\mdfsplitboxheight=\skip102
+\mdfsplitboxdepth=\skip103
+\mdfsplitboxtotalheight=\skip104
+\mdfframetitleboxwidth=\skip105
+\mdfframetitleboxtotalwidth=\skip106
+\mdfframetitleboxheight=\skip107
+\mdfframetitleboxdepth=\skip108
+\mdfframetitleboxtotalheight=\skip109
+\mdffootnoteboxwidth=\skip110
+\mdffootnoteboxtotalwidth=\skip111
+\mdffootnoteboxheight=\skip112
+\mdffootnoteboxdepth=\skip113
+\mdffootnoteboxtotalheight=\skip114
+\mdftotallinewidth=\skip115
+\mdfboundingboxwidth=\skip116
+\mdfboundingboxtotalwidth=\skip117
+\mdfboundingboxheight=\skip118
+\mdfboundingboxdepth=\skip119
+\mdfboundingboxtotalheight=\skip120
+\mdf@freevspace@length=\skip121
+\mdf@horizontalwidthofbox@length=\skip122
+\mdf@verticalmarginwhole@length=\skip123
+\mdf@horizontalspaceofbox=\skip124
+\mdfsubtitleheight=\skip125
+\mdfsubsubtitleheight=\skip126
+\c@mdfcountframes=\count331
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count332
+\c@mdf@env@i=\count333
+\c@mdf@env@ii=\count334
+\c@mdf@zref@counter=\count335
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+
+LaTeX Info: File `Annexe 1' already exists on the system.
+            Not generating it from this source.
+
+
+LaTeX Info: File `Annexe 2' already exists on the system.
+            Not generating it from this source.
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
+Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks41
+\verbatim@line=\toks42
+\verbatim@in@stream=\read4
+)
+(/home/maceo/.miktex/texmfs/install/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box73
+\tcb@upperbox=\box74
+\tcb@lowerbox=\box75
+\tcb@phantombox=\box76
+\c@tcbbreakpart=\count336
+\c@tcblayer=\count337
+\c@tcolorbox@number=\count338
+\l__tcobox_tmpa_box=\box77
+\l__tcobox_tmpa_dim=\dimen282
+\tcb@temp=\box78
+\tcb@temp=\box79
+\tcb@temp=\box80
+\tcb@temp=\box81
+
+(/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
+\c@tcbrastercolumn=\count339
+\c@tcbrasterrow=\count340
+\c@tcbrasternum=\count341
+\c@tcbraster=\count342
+) (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
 (/home/maceo/.miktex/texmfs/install/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 
@@ -1054,7 +1185,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (/home/maceo/.miktex/texmfs/install/tex/latex/tikzfill/tikzlibraryfill.image.co
 de.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box76
+\l__tikzfill_img_box=\box82
 ))
 (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
@@ -1065,9 +1196,9 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box77
-\tcb@totalupperbox=\box78
-\tcb@totallowerbox=\box79
+\tcb@testbox=\box83
+\tcb@totalupperbox=\box84
+\tcb@totallowerbox=\box85
 )
 (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.2.0'
@@ -1078,7 +1209,7 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
 \tcbfitdim=\dimen283
 \tcb@lowerfitdim=\dimen284
 \tcb@upperfitdim=\dimen285
-\tcb@cur@hbadness=\count335
+\tcb@cur@hbadness=\count343
 )
 (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcblistingsutf8.code.te
 x
@@ -1086,24 +1217,24 @@ Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
 (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
 (/home/maceo/.miktex/texmfs/install/tex/latex/listings/listings.sty
-\lst@mode=\count336
-\lst@gtempboxa=\box80
+\lst@mode=\count344
+\lst@gtempboxa=\box86
 \lst@token=\toks43
-\lst@length=\count337
+\lst@length=\count345
 \lst@currlwidth=\dimen286
-\lst@column=\count338
-\lst@pos=\count339
+\lst@column=\count346
+\lst@pos=\count347
 \lst@lostspace=\dimen287
 \lst@width=\dimen288
-\lst@newlines=\count340
-\lst@lineno=\count341
+\lst@newlines=\count348
+\lst@lineno=\count349
 \lst@maxwidth=\dimen289
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count342
-\lst@skipnumbers=\count343
-\lst@framebox=\box81
+\c@lstnumber=\count350
+\lst@skipnumbers=\count351
+\lst@framebox=\box87
 )
 (/home/maceo/.miktex/texmfs/install/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -1116,7 +1247,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
 (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
 )
-\c@tcblisting=\count344
+\c@tcblisting=\count352
 )) (/home/maceo/.miktex/texmfs/install/tex/latex/listingsutf8/listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
 (/home/maceo/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
@@ -1141,22 +1272,22 @@ File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/home/maceo/.miktex/texmfs/install/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
 ))
-\c@tcb@cnt@definition=\count345
-\c@tcb@cnt@prop=\count346
-\c@tcb@cnt@thm=\count347
-\c@tcb@cnt@exercice=\count348
+\c@tcb@cnt@definition=\count353
+\c@tcb@cnt@prop=\count354
+\c@tcb@cnt@thm=\count355
+\c@tcb@cnt@exercice=\count356
  (/home/maceo/.miktex/texmfs/install/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count349
+\c@AlgoLine=\count357
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\algocf@hangindent=\skip60
+\algocf@hangindent=\skip127
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count350
+\c@checkoddpage=\count358
 )
 (/home/maceo/.miktex/texmfs/install/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -1164,54 +1295,43 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 (/home/maceo/.miktex/texmfs/install/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip61
-\skiplinenumber=\skip62
-\skiprule=\skip63
-\skiphlne=\skip64
-\skiptext=\skip65
-\skiplength=\skip66
-\algomargin=\skip67
-\skipalgocfslide=\skip68
+\skiptotal=\skip128
+\skiplinenumber=\skip129
+\skiprule=\skip130
+\skiphlne=\skip131
+\skiptext=\skip132
+\skiplength=\skip133
+\algomargin=\skip134
+\skipalgocfslide=\skip135
 \algowidth=\dimen290
 \inoutsize=\dimen291
 \inoutindent=\dimen292
 \interspacetitleruled=\dimen293
 \interspacealgoruled=\dimen294
 \interspacetitleboxruled=\dimen295
-\algocf@ruledwidth=\skip69
-\algocf@inoutbox=\box82
-\algocf@inputbox=\box83
-\AlCapSkip=\skip70
-\AlCapHSkip=\skip71
-\algoskipindent=\skip72
-\algocf@nlbox=\box84
-\algocf@hangingbox=\box85
-\algocf@untilbox=\box86
-\algocf@skipuntil=\skip73
-\algocf@capbox=\box87
-\algocf@lcaptionbox=\skip74
-\algoheightruledefault=\skip75
-\algoheightrule=\skip76
-\algotitleheightruledefault=\skip77
-\algotitleheightrule=\skip78
-\c@algocfline=\count351
-\c@algocfproc=\count352
-\c@algocf=\count353
-\algocf@algoframe=\box88
-\algocf@algobox=\box89
+\algocf@ruledwidth=\skip136
+\algocf@inoutbox=\box88
+\algocf@inputbox=\box89
+\AlCapSkip=\skip137
+\AlCapHSkip=\skip138
+\algoskipindent=\skip139
+\algocf@nlbox=\box90
+\algocf@hangingbox=\box91
+\algocf@untilbox=\box92
+\algocf@skipuntil=\skip140
+\algocf@capbox=\box93
+\algocf@lcaptionbox=\skip141
+\algoheightruledefault=\skip142
+\algoheightrule=\skip143
+\algotitleheightruledefault=\skip144
+\algotitleheightrule=\skip145
+\c@algocfline=\count359
+\c@algocfproc=\count360
+\c@algocf=\count361
+\algocf@algoframe=\box94
+\algocf@algobox=\box95
 )
 (/home/maceo/.miktex/texmfs/install/tex/latex/ebproof/ebproof.sty
-(/home/maceo/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
-Package: expl3 2023-11-01 L3 programming layer (loader) 
-
-(/home/maceo/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count354
-\l__pdf_internal_box=\box90
-))
-(/home/maceo/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2023-10-10 L3 Experimental document command parser
-)
 Package: ebproof 2021/01/28 v2.1.1 EB's proof trees
 \l__ebproof_separation_dim=\dimen296
 \l__ebproof_rule_margin_dim=\dimen297
@@ -1221,14 +1341,14 @@ Package: ebproof 2021/01/28 v2.1.1 EB's proof trees
 \l__ebproof_rule_dash_space_dim=\dimen301
 \l__ebproof_label_separation_dim=\dimen302
 \l__ebproof_label_axis_dim=\dimen303
-\g__ebproof_register_int=\count355
+\g__ebproof_register_int=\count362
 \l__ebproof_transit_dim=\dimen304
-\g__ebproof_level_int=\count356
-\g__ebproof_stack_box=\box91
-\l__ebproof_1_box=\box92
-\l__ebproof_2_box=\box93
-\l__ebproof_3_box=\box94
-\l__ebproof_4_box=\box95
+\g__ebproof_level_int=\count363
+\g__ebproof_stack_box=\box96
+\l__ebproof_1_box=\box97
+\l__ebproof_2_box=\box98
+\l__ebproof_3_box=\box99
+\l__ebproof_4_box=\box100
 )
 (/home/maceo/.miktex/texmfs/install/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
@@ -1245,8 +1365,8 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen312
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count357
-\c@continuedfloat=\count358
+\c@caption@flags=\count364
+\c@continuedfloat=\count365
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
@@ -1261,26 +1381,26 @@ File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibrary
 shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box96
-\pgfnodeparttwobox=\box97
-\pgfnodepartthreebox=\box98
-\pgfnodepartfourbox=\box99
-\pgfnodeparttwentybox=\box100
-\pgfnodepartnineteenbox=\box101
-\pgfnodeparteighteenbox=\box102
-\pgfnodepartseventeenbox=\box103
-\pgfnodepartsixteenbox=\box104
-\pgfnodepartfifteenbox=\box105
-\pgfnodepartfourteenbox=\box106
-\pgfnodepartthirteenbox=\box107
-\pgfnodeparttwelvebox=\box108
-\pgfnodepartelevenbox=\box109
-\pgfnodeparttenbox=\box110
-\pgfnodepartninebox=\box111
-\pgfnodeparteightbox=\box112
-\pgfnodepartsevenbox=\box113
-\pgfnodepartsixbox=\box114
-\pgfnodepartfivebox=\box115
+\pgfnodepartlowerbox=\box101
+\pgfnodeparttwobox=\box102
+\pgfnodepartthreebox=\box103
+\pgfnodepartfourbox=\box104
+\pgfnodeparttwentybox=\box105
+\pgfnodepartnineteenbox=\box106
+\pgfnodeparteighteenbox=\box107
+\pgfnodepartseventeenbox=\box108
+\pgfnodepartsixteenbox=\box109
+\pgfnodepartfifteenbox=\box110
+\pgfnodepartfourteenbox=\box111
+\pgfnodepartthirteenbox=\box112
+\pgfnodeparttwelvebox=\box113
+\pgfnodepartelevenbox=\box114
+\pgfnodeparttenbox=\box115
+\pgfnodepartninebox=\box116
+\pgfnodeparteightbox=\box117
+\pgfnodepartsevenbox=\box118
+\pgfnodepartsixbox=\box119
+\pgfnodepartfivebox=\box120
 )))
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypositioning.code.tex
@@ -1306,11 +1426,11 @@ s.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen316
 \pgfdecoratedinputsegmentremainingdistance=\dimen317
 \pgf@decorate@distancetomove=\dimen318
-\pgf@decorate@repeatstate=\count359
+\pgf@decorate@repeatstate=\count366
 \pgfdecorationsegmentamplitude=\dimen319
 \pgfdecorationsegmentlength=\dimen320
 )
-\tikz@lib@dec@box=\box116
+\tikz@lib@dec@box=\box121
 )
 (/home/maceo/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathreplacing.code.tex))
@@ -1362,34 +1482,34 @@ shapes.callouts.code.tex)))
 s/tikzlibraryquotes.code.tex
 File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\c@fig=\count360
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 91
-.
+\c@fig=\count367
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 19
+6.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-Package hyperref Info: Link coloring OFF on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+Package hyperref Info: Link coloring OFF on input line 196.
 
 (rapport.out) (rapport.out)
 \@outlinefile=\write4
@@ -1398,16 +1518,16 @@ Package hyperref Info: Link coloring OFF on input line 91.
 
 (/home/maceo/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count361
+\scratchcounter=\count368
 \scratchdimen=\dimen321
-\scratchbox=\box117
-\nofMPsegments=\count362
-\nofMParguments=\count363
+\scratchbox=\box122
+\nofMPsegments=\count369
+\nofMParguments=\count370
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count364
+\MPscratchCnt=\count371
 \MPscratchDim=\dimen322
-\MPnumerator=\count365
-\makeMPintoPDFobject=\count366
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
 \everyMPtoPDFconversion=\toks45
 ) (/home/maceo/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1451,133 +1571,171 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 91.
-LaTeX Info: Command `\ddddot' is already robust on input line 91.
-\c@lstlisting=\count367
+LaTeX Info: Command `\dddot' is already robust on input line 196.
+LaTeX Info: Command `\ddddot' is already robust on input line 196.
+\c@lstlisting=\count374
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-4.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+99.
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-4.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+99.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-94.
+199.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-94.
+199.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 94.
+(Font)              <20.74> on input line 199.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 94.
+(Font)              <14.4> on input line 199.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 94.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
-
+(Font)              <12> on input line 199.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 199
+.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 199
+.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 9
-4.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
+99.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/stmaryrd/Ustmry.fd)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 94.
+(Font)              <8> on input line 199.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 94.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-07.
+(Font)              <6> on input line 199.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+12.
 
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-
-Package hyperref Warning: Suppressing empty link on input line 117.
-
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 117.
-
-Package hyperref Warning: Suppressing empty link on input line 117.
-
-<./images/track_06.png, id=43, 903.375pt x 602.25pt>
+(Font)              <10.95> on input line 223.
+<./images/track_06.png, id=45, 903.375pt x 602.25pt>
 File: ./images/track_06.png Graphic file (type png)
 <use ./images/track_06.png>
-Package pdftex.def Info: ./images/track_06.png  used on input line 123.
+Package pdftex.def Info: ./images/track_06.png  used on input line 227.
 (pdftex.def)             Requested size: 142.25475pt x 113.80379pt.
-<./images/track_06_computed.png, id=44, 526.96875pt x 460.72125pt>
+<./images/track_06_computed.png, id=46, 526.96875pt x 460.72125pt>
 File: ./images/track_06_computed.png Graphic file (type png)
 <use ./images/track_06_computed.png>
-Package pdftex.def Info: ./images/track_06_computed.png  used on input line 124
+Package pdftex.def Info: ./images/track_06_computed.png  used on input line 228
 .
 (pdftex.def)             Requested size: 142.26738pt x 113.80917pt.
-[1
+ [1
 
 {/home/maceo/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}{/home/maceo/.mikt
 ex/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}{/home/maceo/.miktex/texmfs/inst
 all/fonts/enc/dvips/lm/lm-ts1.enc}{/home/maceo/.miktex/texmfs/install/fonts/enc
 /dvips/lm/lm-mathit.enc}{/home/maceo/.miktex/texmfs/install/fonts/enc/dvips/lm/
-lm-rm.enc} <./images/track_06.png (PNG copy)> <./images/track_06_computed.png>]
-
-
-Package hyperref Warning: Suppressing empty link on input line 147.
-
-<./images/car_state.png, id=63, 304.13625pt x 187.70125pt>
+lm-rm.enc}]
+<./images/car_state.png, id=64, 304.13625pt x 187.70125pt>
 File: ./images/car_state.png Graphic file (type png)
 <use ./images/car_state.png>
-Package pdftex.def Info: ./images/car_state.png  used on input line 153.
+Package pdftex.def Info: ./images/car_state.png  used on input line 256.
 (pdftex.def)             Requested size: 113.80948pt x 85.35837pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-59.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+63.
+
 (/home/maceo/.miktex/texmfs/install/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [2 <./images/car_state.png>]
-
-Package hyperref Warning: Suppressing empty link on input line 169.
-
-
-Package hyperref Warning: Suppressing empty link on input line 173.
-
-<./images/env_example.png, id=76, 691.58376pt x 549.05125pt>
+) [2 <./images/track_06.png (PNG copy)> <./images/track_06_computed.png> <./ima
+ges/car_state.png>]
+<./images/env_example.png, id=79, 691.58376pt x 549.05125pt>
 File: ./images/env_example.png Graphic file (type png)
 <use ./images/env_example.png>
-Package pdftex.def Info: ./images/env_example.png  used on input line 179.
+Package pdftex.def Info: ./images/env_example.png  used on input line 281.
 (pdftex.def)             Requested size: 170.7111pt x 142.26404pt.
 
-Package hyperref Warning: Suppressing empty link on input line 184.
-
 [3 <./images/env_example.png>]
-Overfull \hbox (14.59424pt too wide) in paragraph at lines 207--207
+Overfull \hbox (14.59424pt too wide) in paragraph at lines 310--310
 []\T1/lmr/bx/n/10.95 Replay Buffer\T1/lmr/m/n/10.95 : A memory that stores past
  experiences $\U/matha/m/n/10.95 p\OML/lmm/m/it/10.95 s; a; r; s[]\U/matha/m/n/
 10.95 q$\T1/lmr/m/n/10.95 . Randomly sampling experiences
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--237
+Underfull \hbox (badness 10000) in paragraph at lines 334--340
 
  []
 
-[4] [5] (rapport.aux)
+[4]
+<./images/graphe_comparaison.png, id=98, 867.24pt x 433.62pt>
+File: ./images/graphe_comparaison.png Graphic file (type png)
+<use ./images/graphe_comparaison.png>
+Package pdftex.def Info: ./images/graphe_comparaison.png  used on input line 36
+5.
+(pdftex.def)             Requested size: 563.69934pt x 281.84966pt.
+
+Overfull \hbox (80.00247pt too wide) in paragraph at lines 365--366
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--369
+
+ []
+
+[5]
+<./images/comparaison3.png, id=104, 867.24pt x 433.62pt>
+File: ./images/comparaison3.png Graphic file (type png)
+<use ./images/comparaison3.png>
+Package pdftex.def Info: ./images/comparaison3.png  used on input line 375.
+(pdftex.def)             Requested size: 476.98349pt x 238.49173pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--379
+
+ []
+
+[6 <./images/graphe_comparaison.png>]
+<./images/graphe_reward.png, id=114, 462.528pt x 346.896pt>
+File: ./images/graphe_reward.png Graphic file (type png)
+<use ./images/graphe_reward.png>
+Package pdftex.def Info: ./images/graphe_reward.png  used on input line 384.
+(pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
+<./images/comparaison2.png, id=116, 1084.05pt x 361.35pt>
+File: ./images/comparaison2.png Graphic file (type png)
+<use ./images/comparaison2.png>
+Package pdftex.def Info: ./images/comparaison2.png  used on input line 400.
+(pdftex.def)             Requested size: 498.66905pt x 166.223pt.
+
+Overfull \hbox (14.97218pt too wide) in paragraph at lines 400--401
+ [][] 
+ []
+
+<./images/image.png, id=118, 516.93124pt x 339.2675pt>
+File: ./images/image.png Graphic file (type png)
+<use ./images/image.png>
+Package pdftex.def Info: ./images/image.png  used on input line 411.
+(pdftex.def)             Requested size: 241.84843pt x 158.72581pt.
+[7 <./images/comparaison3.png> <./images/graphe_reward.png>] [8 <./images/compa
+raison2.png> <./images/image.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 426.
+ (Annexe 1.tex) (Annexe 2.tex) [9] [10]
+(rapport.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
@@ -1586,13 +1744,13 @@ Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36188 strings out of 476527
- 743264 string characters out of 5797525
- 1938530 words of memory out of 5000000
- 57480 multiletter control sequences out of 15000+600000
- 619920 words of font info for 104 fonts, out of 8000000 for 9000
+ 37495 strings out of 476527
+ 766980 string characters out of 5797525
+ 2021530 words of memory out of 5000000
+ 58658 multiletter control sequences out of 15000+600000
+ 623277 words of font info for 106 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 93i,7n,99p,784b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,8n,96p,784b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/maceo/.miktex/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi600/matha
 6.pk> </home/maceo/.miktex/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi600/ma
 tha8.pk> </home/maceo/.miktex/texmfs/data/fonts/pk/ljfour/public/mathabx/dpi657
@@ -1602,14 +1760,15 @@ aceo/.miktex/texmfs/install/fonts/type1/public/lm/lmmi10.pfb></home/maceo/.mikt
 ex/texmfs/install/fonts/type1/public/lm/lmmi8.pfb></home/maceo/.miktex/texmfs/i
 nstall/fonts/type1/public/lm/lmr10.pfb></home/maceo/.miktex/texmfs/install/font
 s/type1/public/lm/lmr12.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/pub
-lic/lm/lmr17.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmr8
-.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmri10.pfb></hom
-e/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb></home/maceo/.m
-iktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/mace
-o/.miktex/texmfs/install/fonts/type1/public/hoekwater/stmary10.pfb>
-Output written on rapport.pdf (5 pages, 463415 bytes).
+lic/lm/lmr17.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmr6
+.pfb></home/maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmr8.pfb></home/
+maceo/.miktex/texmfs/install/fonts/type1/public/lm/lmri10.pfb></home/maceo/.mik
+tex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb></home/maceo/.miktex/texmfs
+/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/maceo/.miktex/te
+xmfs/install/fonts/type1/public/hoekwater/stmary10.pfb>
+Output written on rapport.pdf (10 pages, 869073 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

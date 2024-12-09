@@ -1,0 +1,9 @@
+    batch_size = 40
+    epochs = 5000
+    max_episode_duration = 1000 * 1/env.env.time
+    epsilon_max = 1
+    epsilon_min = 0.01
+    epsilon_decay = 30.
+    lr = 1e-4
+    discount_factor = 0.9
+    self.model = DQN(400,8,self.n_action)

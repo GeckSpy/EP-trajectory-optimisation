@@ -7,6 +7,7 @@
 \usepackage[english]{babel}
 \usepackage{appendix}
 \usepackage{enumitem}
+\usepackage{xcolor}
 
 %Fusionneer des pages
 \usepackage{pgfpages}
@@ -221,13 +222,12 @@ You can see the complete project on our public \href{https://github.com/GeckSpy/
 			\subsubsection*{Tracks}
 A track is originally a .png file wich look like the left image of figure \ref{figure:track}. Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. After that, we crop the image, compute the starting point and the lines of track (that will be explained in the reward part) to have a final result which look the right image of figure \ref{figure:track}. The white case represent the road, the green point represent the starting point.
 \begin{center}
-\label{figure:track}
 	\begin{figure}[ht]
-		\refstepcounter{fig}
 		\centering
 		\includegraphics[width=5cm, height=4cm]{track_06.png}
 		\includegraphics[width=5cm, height=4cm]{track_06_computed.png}
 		\caption{\underline{.png and computed track}}
+		\label{figure:track}
 	\end{figure}
 \end{center}
 
@@ -251,12 +251,11 @@ The behaviour of the car will need to interact with the track therefore we need 
 }
 Then, the representation looks like figure \ref{figure:car state}.
 \begin{center}
-\label{figure:car state}
 	\begin{figure}[ht]
-		\refstepcounter{fig}
 		\centering
 		\includegraphics[width=4cm, height=3cm]{car_state.png}
 		\caption{\underline{Car state}}
+		\label{figure:car state}
 	\end{figure}
 \end{center}
 		
@@ -277,13 +276,12 @@ On top of that, at each time step, we add to the current reward the speed of the
 			\subsubsection*{An example of a car on a track}
 After explaining all of this, here is an example in figure \ref{figure:env example}. We have plot the trajectory of the car, the green color is when the car has accelerate, red color when it brake and yellow otherwise.
 \begin{center}
-\label{figure:env example}
 	\begin{figure}[ht]
-		\refstepcounter{fig}
 		\centering
 		\includegraphics[width=6cm, height=5cm]{env_example.png}\\
 		List of rounded reward: \texttt{[10, 1, 2, 12, 13, 13, 13, 14, 24, 14, 13, 12, 13, -497]}
 		\caption{\underline{Car state}}
+		\label{figure:env example}
 	\end{figure}
 \end{center}
 The total reward of a car behaviour is the sum of all reward of a simulation with a car behaviour. For example, the reward of the car behaviour or the figure \ref{figure:env example} is $-343$.
@@ -346,7 +344,7 @@ Basic genetic algorithms are not efficient enough to compute an optimize behavio
 	
 	\section*{Simulation}
 Once we completed the modeling of the environment, the deep Q-learning algorithm and the genetic algorithm, we have to compute some simulation to process evaluation performance. We will compare our two algorithms using various metrics. For this purpose, we choose the following metric: the average reward after training depending of some parameter, we call it the score of a training. We measure this value across different training durations and varying the numbers of tracks used to training the models. To ensure robustness and evaluate potential over-fitting, we test the models on tracks that were not included in the training set.\\
-This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. The goal is for the cars to complete laps as quickly as possible, and the average reward reflects their performance under these conditions. We used \href{https://www.grid5000.fr}{Grid5000} to train our model for reproducibility, to have a stable computer and to be able to run our different algorithm on a computer with the same configuration and computation power.
+This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. The goal is for the cars to complete laps as quickly as possible, and the average reward reflects their performance under these conditions.
 \mlist{
 \item First, we will compare genetic algorithm to Q-learning depending of the training time and the number of tracks used to train the car. We we train our algorithms during $10$ to $60$ minutes and with $10$ to $67$ tracks (which represent $80\%$ of the total number of tracks created).
 \item Then, we will compare the result of deep Q-learning depending of some hyper-parameters which are, the goal here is to be able to find the hyper-parameters that fit the most the situation, and for us this evaluation is only possible by running the algorithms with different parameters.
@@ -354,71 +352,65 @@ This approach is applied in the context of an AI project where we train AI agent
 }
 
     \section*{Experimental}
-All the computations presented in this section were performed on the \href{https://www.grid5000.fr}{Grid5000} infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions, as they were carried out on machines with equivalent performance.
+All the computations presented in this section were performed on the \href{https://www.grid5000.fr}{Grid5000} infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions, as they were carried out on machines with equivalent performance and assure stability of our executions.
 
 		\subsection*{Comparison between Deep Q-Learning and Genetic Algorithm}
-        Firstly, our goal was to be able to compare the different models we tried to use to train the car, in order to do that, we choose to give a certain time and a certain amount of tracks for the different models. The models were allowed to be training for this amount of time on \href{https://www.grid5000.fr}{Grid5000}. \\
-        We choose to evaluate the models on these metrics because we believed that they were the most important in the training of such AI. Indeed, these metrics allow the users to have an idea on how powerful can the models be. \\
-        As said before, we choose to evaluate the average reward on tracks on which the car has not trained, we believed it is the most relevant way to evaluate the training because it allows us to evaluate if there is over-fitting or not and this represent how much the car is doing well on the track. \\
-        \\
-        Since the training can be long to have satisfying result, we choose to concentrate ourselves on the following durations : $\{10;40;60\}$ (mins) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluate these trainings on $20$ tracks that are not in the training set. \\
-        \\
-        The two models are run with specific hyper-parameters for this section that are described in the final section \pageref{Hyperparameters}. \\
-        Here are the results :\\
-        \begin{figure}[h]
+Firstly, our goal was to be able to compare the different models we tried to use to train the car, in order to do that, we choose to give a certain time and a certain amount of tracks for the different models. The models were allowed to be training for this amount of time on \href{https://www.grid5000.fr}{Grid5000}.\\
+We choose to evaluate the models on these metrics because we believed that they were the most important in the training of such AI. Indeed, these metrics allow the users to have an idea on how powerful can the models be.\\
+As said before, we choose to evaluate the average reward on tracks on which the car has not trained, we believed it is the most relevant way to evaluate the training because it allows us to evaluate if there is over-fitting or not and this represent how much the car is doing well on the track.\\
+\\
+Since the training can be long to have satisfying result, we choose to concentrate ourselves on the following durations : $\{10;40;60\}$ (mins) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluate these trainings on $20$ tracks that are not in the training set. The two models are run with specific hyper-parameters for this section that are described in the final section \pageref{Hyperparameters}. The result are in figure \ref{figure:comparaison GA VS DQ}.
+        \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.65]{graphe_comparaison.png}
-            \caption*{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
-            \label{fig:enter-label}
+            \caption{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
+            \label{figure:comparaison GA VS DQ}
         \end{figure}
 
-        We can notice that the Deep-Q algorithm outperform the Genetic algorithm for every test. \\
-        We can also notice that sometimes the use of more time or more tracks can lower the performance. \\ 
-        This can be due to over-fitting. \\
-        \\
-        To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. \\
-        In order for the algorithm to perform efficiently, we want it to to have low standard deviation.
-        \begin{figure}[h]
+We can notice that the Deep-Q algorithm outperform the Genetic algorithm for every test. We can also notice that sometimes the use of more time or more tracks can lower the performance. This can be due to over-fitting. \\
+\\
+To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. In order for the algorithm to perform efficiently, we want it to to have low standard deviation. The result are shown in figure \ref{figure:standard deviation}.
+        \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.55]{comparaison3.png}
-            \caption*{Standard deviation after training}
-            \label{fig:enter-label}
+            \caption{Standard deviation after training}
+            \label{figure:standard deviation}
         \end{figure}
-        \newpage
-        Finally, we can look at the evolution of the reward for the Deep Q learning for $60$ minutes of training on $6z$ tracks to have an idea the possible over-fitting happening for this training. \\
-        \begin{figure}[h]
+ 
+\newpage
+Finally, we can look at the evolution of the reward for the Deep Q learning for $60$ minutes of training on $67$ tracks to have an idea the possible over-fitting happening for this training (figure \ref{figure:evolution of the reward}). We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting.
+        \begin{figure}[ht]
             \centering
             \includegraphics[width=0.5\linewidth]{graphe_reward.png}
             \caption{Evolution of the reward}
-            \label{fig:enter-label}
+            \label{figure:evolution of the reward}
         \end{figure}
-        We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting. \\
+        
+        
 		\subsection*{Influence of Hyper-parameters on Deep Q-Learning}
-		Focusing on the Deep Q algorithm, we can ask ourselves what are the best hyper-parameters. \\
-        We focused on $3$ hyper-parameters that we perceived as more important in our model : \\
-        \begin{itemize}
-            \item Batch size : this is the number of samples that are kept in memory between each step of the training. 
-            \item Lr (learning rate) : this is the velocity at which the neural network update the weights. 
-            \item Epsilon Decay : this is the probability that the model will try to explore new ways. 
-        \end{itemize}
-        We get the following results :
-        \begin{figure}[h]
+Focusing on the Deep Q algorithm, we can ask ourselves what are the best hyper-parameters. We focused on $3$ hyper-parameters that we perceived as more important in our model
+\mlist{
+\item Batch size : this is the number of samples that are kept in memory between each step of the training. 
+\item Lr (learning rate) : this is the velocity at which the neural network update the weights. 
+\item Epsilon Decay : this is the probability that the model will try to explore new ways. 
+}
+We get the following results (figure \ref{figure:Evolution of score depending of hyper-parameter}). These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example for batch size, we want to have a batch size of $60$ in order to be efficient.
+        \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.46]{comparaison2.png}
-            \caption*{Evolution of the score after fluctuating hyper-parameters}
-            \label{fig:enter-label}
+            \caption{Evolution of the score after fluctuating hyper-parameters}
+            \label{figure:Evolution of score depending of hyper-parameter}
         \end{figure}
-        These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example for batch size, we want to have a batch size of $60$ in order to be efficient.
+        
+        
+        
 		\subsection*{Best Car: performances of a model trained for few hours }
-        We can now look at the performance of the best car, it is chosen on how efficient it is on the tracks. \\
-        Firstly, as seen in part one, training for too long on a reduced amount of tracks can lead to over-fitting, we have been able to see this also by training a model for $6$ hours in the same conditions as the other. This model performs way less than the others. \\
-        We choose the Hyper-parameters chosen due to part 2 and the time and number of tracks that maximise the score. \\
-        Here is the evolution of the car on a map : 
+        We can now look at the performance of the best car, it is chosen on how efficient it is on the tracks. Firstly, as seen in part one, training for too long on a reduced amount of tracks can lead to over-fitting, we have been able to see this also by training a model for $6$ hours in the same conditions as the other. This model performs way less than the others. We choose the Hyper-parameters chosen due to part 2 and the time and number of tracks that maximise the score. You can see on figure \ref{figure:Evolution of best car} the evolution of the car on a map that the car has never seen before. 
         \begin{figure}[h]
             \centering
             \includegraphics[width=0.5\linewidth]{image.png}
             \caption{Evolution of the best car}
-            \label{fig:enter-label}
+            \label{figure:Evolution of best car}
         \end{figure}
     
     
@@ -427,17 +419,17 @@ All the computations presented in this section were performed on the \href{https
 \newpage
 \section*{Annexes}
 \subsection*{Reproducibility}
-This section store the data necessary to reproduce the experiments : \\
-\subsubsection*{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
+This section store the data necessary to reproduce the experiments: \subsubsection*{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
 Hyper-parameters for the genetic algorithm for part 1.
-\begin{code}
+\begin{mybox}
     \tiny{
 \lstinputlisting{Annexe 1}}
-\end{code}
+\end{mybox}
 \label{Hyperparameters}
 Hyper-parameters for the Deep Q learning algorithm for part 1.
-\begin{code}
+\begin{mybox}
     \tiny{
 \lstinputlisting{Annexe 2}}
-\end{code}
+\end{mybox}
+
 \end{document}
