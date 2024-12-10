@@ -422,9 +422,9 @@ Finally, we can look at the evolution of the reward for the Deep Q-Learning for 
 		\subsection*{Influence of Hyper-parameters on Deep Q-Learning}
 Focusing on the Deep Q algorithm, we can wonder what are the best hyper-parameters. We focused on $3$ hyper-parameters that we perceived as more important in our model:
 \mlist{
-\item Batch size : this is the number of samples used to optimize the model's parameters for each optimization step. 
-\item Lr (learning rate) : this is the velocity at which the neural network updates the weights. 
-\item Epsilon Decay : this is the probability that the model will try to explore new ways. 
+\item Batch size : the number of samples used to optimize the model's parameters for each optimization step. 
+\item Lr (learning rate) : the velocity at which the neural network updates the weights. 
+\item Epsilon Decay : the probability that the model will try to explore new ways. 
 }
 We get the following results (figure \ref{figure:Evolution of score depending of hyper-parameter}). These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example, for the batch size, we want to have a batch size of $60$ in order to be efficient.
         \begin{figure}[ht]
@@ -457,6 +457,7 @@ Initially, we aimed to compare the performance of the algorithms with real-world
 \newpage
 \section*{Appendix}
 \subsection*{Reproducibility}
+Github : \url{https://github.com/GeckSpy/PE-trajectory-optimization}
 This section stores the data necessary to reproduce the experiments: \subsubsection*{Comparison between the Genetic algorithm and the Deep Q-Learning algorithm}
 Hyper-parameters for the genetic algorithm for part 1.
 \begin{mybox}
