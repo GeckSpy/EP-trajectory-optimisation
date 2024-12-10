@@ -85,3 +85,90 @@ The total reward of a car behavior is the sum of all reward of a simulation with
 
 $$ \underset{r \in R}{\sum} r= -343 $$
 
+
+
+## Deep Q-learning
+Deep Q-Learning is a reinforcement learning algorithm that combines Q-Learning with Deep Learning to solve complex decision-making problems. It allows an agent to learn how to act optimally in environments with large state spaces by approximating a function, known as the Q-function, which evaluates the quality of an action taken in a given state.
+    
+### Q-function
+The Q-function, $Q(s, a)$, represents the expected cumulative reward an agent will receive after taking action $a$ in state $s$, and then following the optimal policy. The cumulative reward is computed as:
+
+$$Q(s, a) = r + \gamma \max_{a'} Q(s', a')$$
+
+Where:
+ - $r$ is the immediate reward received after taking action $a$ in state $s$.
+ - $s'$ is the next state reached.
+ - $a'$ is the next action.
+ - $\gamma \in [0, 1]$ is the discount factor, which balances immediate and future rewards.
+
+    
+ ### Key Techniques
+ - Replay Buffer: A memory that stores past experiences $(s, a, r, s')$. Randomly sampling experiences from the buffer during training reduces correlations between consecutive samples, improving learning stability.
+ - Exploration-Exploitation Balance: The agent uses an $\varepsilon$-greedy policy to choose actions, where it explores randomly with probability $\varepsilon$ and exploits the best-known action otherwise.
+
+    
+### High-Level Workflow
+ - Observe the current state $s$.
+ - Choose an action $a$ using an $\varepsilon$-greedy policy.
+ - Execute the action, observe the reward $r$ and next state $s'$.
+ - Store the experience $(s, a, r, s')$ in the replay buffer.
+ - Sample a mini-batch of experiences from the buffer to train the Q-network.
+
+
+## Genetic algorithms
+### What are genetic algorithms?
+Genetic algorithms (GA) are probabilistic algorithms based on natural selection. Therefore, GA takes some populations which are sets of solutions (here a solution is a car's behavior), select the best solutions thanks to the reward function. Then, it changes the population by adding new random solutions, adding some mutations which are some small variations of a behavior, adding some cross-over which are the equivalent of natural reproduction. We can either repeat this process a fixed number of generations or for a fixed amount of time.
+		
+### Markov Chain modernization
+We will now introduce a Markov chain modelization for genetic algorithm. We define a Markov chain $(Y_n)_{n\in\mathbb{N}}$ as following:
+ - A state of $(Y_n)_{n\in\mathbb{N}}$ is a population.
+ - Let $y_0$ be a special state such that if $Y_n = y_0$ then it means that the population of state $Y_n$ contain an optimal solution.
+
+Now, the sequence of population of genetic algorithm can be describe with this Markov chains. $Y_n$ represent the population at generation $n$. Notice that the state $y_0$ is an absorbing state. In fact if $Y_n = y_0$ then it mean that the population $P_n$ contain an optimal solution. Since we always keep the best solution of the previous population, it means that $\forall n'>n$, we have that $P_{n'}$ contain an optimal solution. Therefore, $\forall n'>n$, $Y_{n'} = y_0$. Moreover, $y_0$ is the only absorbing state of $(Y_n)_{n\in\mathbb{N}}$.
+
+If we suppose that our mutation and cross-over are made such that a solution $x$ can reach $y$ by a series of a finite number of those operations, then, all solutions $x$ can reach an optimal value. Then every state $y_n$ can reach the state $y_0$. The set of all possible state is finite. Then $\mathbb{P}(Y_n = y_0) \underset{n \rightarrow +\infty}{\rightarrow} 1$
+
+Then $\mathbb{P}($ The population $P_n$ contain an optimal solution$) \underset{n \rightarrow +\infty}{\rightarrow} 1$.\\
+Thus, the genetic algorithm converge toward a global optimal solution. However, we do not know how many time it will take in average.
+		
+### NEAT
+Basic genetic algorithms are not efficient enough to compute an optimized behavior. Therefore, we will use the famous python packages called `NEAT`. It is an optimized generalized genetic algorithms with represent solution as dynamic neural network. By dynamic we mean that the algorithm can add or delete some of the nodes of the neural network. The principle of GA stay the same but we have a lot more hyper-parameters.
+
+# Simulation
+Once we completed the modeling of the environment, the deep Q-learning algorithm and the genetic algorithm, we have to compute some simulation to process evaluation performance. We will compare our two algorithms using various metrics. For this purpose, we choose the following metric: the average reward after training depending of some parameter, we call it the score of a training. We measure this value across different training durations and varying the numbers of tracks used to training the models. To ensure robustness and evaluate potential over-fitting, we test the models on tracks that were not included in the training set.
+
+This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. The goal is for the cars to complete laps as quickly as possible, and the average reward reflects their performance under these conditions.
+ - First, we will compare genetic algorithm to Q-learning depending of the training time and the number of tracks used to train the car. We will train our algorithms during $10$ to $60$ minutes and with $10$ to $67$ tracks (which represent $80\%$ of the total number of tracks created).
+ - Then, we will compare the result of deep Q-learning depending of some hyper-parameters. The goal here is to be able to find the hyper-parameters that fit the most the situation, and for us this evaluation is only possible by running the algorithms with different parameters.
+ - Finally, we will evaluate the performance or the best car we found using deep Q-learning.
+
+# Experimentation
+All the computations presented in this section were performed on the `Grid5000` infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions, as they were carried out on machines with equivalent performance and assure stability of our executions.
+
+## Comparison between Deep Q-Learning and Genetic Algorithm
+Firstly, our goal was to be able to compare the different models we tried to use to train the car, in order to do that, we choose to give a certain time and a certain amount of tracks for the different models. The models were allowed to be training for this amount of time on Grid5000.
+
+We choose to evaluate the models on these metrics because we believed that they were the most important in the training of such AI. Indeed, these metrics allow the users to have an idea on how powerful can the models be.
+
+As said before, we choose to evaluate the average reward on tracks on which the car has not trained, we believed it is the most relevant way to evaluate the training because it allows us to evaluate if there is over-fitting or not and this represent how much the car is doing well on the track.
+
+Since the training can be long to have satisfying result, we choose to concentrate ourselves on the following durations : $\{10;40;60\}$ (minutes) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluate these trainings on $20$ tracks that are not in the training set. The two models are run with specific hyper-parameters for this section that are described in the final section. The result are in next figure.
+
+<p align="center">
+<img src="Return/Repport/images/graphe_comparaison.png" alt="drawing"/>
+</p>
+
+We can notice that the Deep-Q algorithm outperform the Genetic algorithm for every test. We can also notice that sometimes the use of more time or more tracks can lower the performance or our deep Q-learning algorithm. This is surely due to over-fitting.
+
+To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. In order for the algorithm to perform efficiently, we want it to have low standard deviation. The result are shown in figure next figure.
+
+<p align="center">
+<img src="Return/Repport/images/comparaison3.png" alt="drawing"/>
+</p>
+
+Finally, we can look at the evolution of the reward for the Deep Q learning for $60$ minutes of training on $67$ tracks to have an idea the possible over-fitting happening for this training. We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting.
+
+<p align="center">
+<img src="Return/Repport/images/graphe_reward.png" alt="drawing" width="400" height="300"/>
+</p>
+
