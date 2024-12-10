@@ -20,8 +20,8 @@ We focus on solving the problem of optimizing a car's trajectory using a Deep Q-
 A track is originally a .png file which look like the left image of next figure. Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. After that, we crop the image, compute the starting point and the lines of track (that will be explained in the reward part) to have a final result which look the right image of next figure. The white case represent the road, the green point represent the starting point.
 
 <p align="center">
-<img src="Return/Repport/images/track_06.png" alt="drawing" width="400" height="300"/>
-<img src="Return/Repport/images/track_06_computed.png" alt="drawing" width="400" height="300"/>
+<img src="Return/Report/images/track_06.png" alt="drawing" width="400" height="300"/>
+<img src="Return/Report/images/track_06_computed.png" alt="drawing" width="400" height="300"/>
 </p>	
 
 ### Cars' physics
@@ -48,7 +48,7 @@ The behavior of the car will need to interact with the track therefore we need t
 Then, the representation looks like the following figure:
 
 <p align="center">
-<img src="Return/Repport/images/car_state.png" alt="drawing" width="300" height="200"/>
+<img src="Return/Report/images/car_state.png" alt="drawing" width="300" height="200"/>
 </p>
 		
 ### Technical aspects of the environment
@@ -76,7 +76,7 @@ On top of that, at each time step, we add to the current reward the speed of the
 After explaining all of this, here is an example iin next figure. We have plot the trajectory of the car, the green color is when the car has accelerate, red color when it has brake and yellow otherwise.
 
 <p align="center">
-<img src="Return/Repport/images/env_example.png" alt="drawing" width="400" height="300"/>
+<img src="Return/Report/images/env_example.png" alt="drawing" width="400" height="300"/>
 
 List of rounded reward: $R=[10, 1, 2, 12, 13, 13, 13, 14, 24, 14, 13, 12, 13, -497]$
 </p>
@@ -155,7 +155,7 @@ As said before, we choose to evaluate the average reward on tracks on which the 
 Since the training can be long to have satisfying result, we choose to concentrate ourselves on the following durations : $\{10;40;60\}$ (minutes) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluate these trainings on $20$ tracks that are not in the training set. The two models are run with specific hyper-parameters for this section that are described in the final section. The result are in next figure.
 
 <p align="center">
-<img src="Return/Repport/images/graphe_comparaison.png" alt="drawing"/>
+<img src="Return/Report/images/graphe_comparaison.png" alt="drawing"/>
 </p>
 
 We can notice that the Deep-Q algorithm outperform the Genetic algorithm for every test. We can also notice that sometimes the use of more time or more tracks can lower the performance or our deep Q-learning algorithm. This is surely due to over-fitting.
@@ -163,13 +163,13 @@ We can notice that the Deep-Q algorithm outperform the Genetic algorithm for eve
 To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. In order for the algorithm to perform efficiently, we want it to have low standard deviation. The result are shown in figure next figure.
 
 <p align="center">
-<img src="Return/Repport/images/comparaison3.png" alt="drawing"/>
+<img src="Return/Report/images/comparaison3.png" alt="drawing"/>
 </p>
 
 Finally, we can look at the evolution of the reward for the Deep Q learning for $60$ minutes of training on $67$ tracks to have an idea the possible over-fitting happening for this training. We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting.
 
 <p align="center">
-<img src="Return/Repport/images/graphe_reward.png" alt="drawing" width="400" height="300"/>
+<img src="Return/Report/images/graphe_reward.png" alt="drawing" width="400" height="300"/>
 </p>
 
 
@@ -182,7 +182,7 @@ Focusing on the Deep Q algorithm, we can ask ourselves what are the best hyper-p
 We get the following results. These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example for batch size, we want to have a batch size of $60$ in order to be efficient.
 
 <p align="center">
-<img src="Return/Repport/images/comparaison2.png" alt="drawing" width="1000" height="300"/>
+<img src="Return/Report/images/comparaison2.png" alt="drawing" width="1000" height="300"/>
 </p>
         
         
@@ -191,7 +191,7 @@ We get the following results. These graphs allows us to have an idea on how effi
 We can now look at the performance of the best car, it is chosen on how efficient it is on the tracks. Firstly, as seen in part one, training for too long on a reduced amount of tracks can lead to over-fitting, we have been able to see this also by training a model for $6$ hours in the same conditions as the other. This model performs way less than the others. We choose the Hyper-parameters chosen thanks to part 2 and the time and number of tracks that maximize the score. You can see on next figure the evolution of the car on a map that the car has never seen before. 
 
 <p align="center">
-<img src="Return/Repport/images/image.png" alt="drawing" width="550" height="400"/>
+<img src="Return/Report/images/image.png" alt="drawing" width="550" height="400"/>
 </p>
     
 # Conclusion
