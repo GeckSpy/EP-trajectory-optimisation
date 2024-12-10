@@ -53,15 +53,15 @@ Then, the representation looks like the following figure:
 		
 ### Technical aspects of the environment
 
-To manipulate our environment, we use the python packages \texttt{gymnasium} which provide code convention for those type or environment, i.e. environment where at each time step, you have one action to do. The environment has to have some essential function: \texttt{reset()} that reset the environment to be able to do an other simulation, \texttt{render()} that render the current state of our environment and the most important one is \texttt{step()} that do one step of time, i.e. given an action, the \texttt{step()} function figure out is the car has crashed or not, move the car to its next position and return the new state of the car, a reward and if the car has crashed.
+To manipulate our environment, we use the python packages `gymnasium` which provide code convention for those type or environment, i.e. environment where at each time step, you have one action to do. The environment has to have some essential function:`reset()` that reset the environment to be able to do an other simulation, `render()` that render the current state of our environment and the most important one is `step()` that do one step of time, i.e. given an action, the `step()` function figure out is the car has crashed or not, move the car to its next position and return the new state of the car, a reward and if the car has crashed.
 
-Our environment has a variable named \texttt{time} which give us the opportunities to discreet more or less the time.
+Our environment has a variable named `time` which give us the opportunities to discreet more or less the time.
 		
 ### Rewards
 
 For those type of problem where the AI model has to compute a behavior, the AI model produces something which look like a function $f$ that take a car state and return an action. We need to specifies to our AI model when it produce a good action and a bad action, for instance, if a car crash, we need to punish the AI model.
 
-We do that thanks to a reward function implemented in the function \texttt{step()} of our environment. The reward is an integer, the bigger it is the best the action was. This function is clearly the most important one of all the project because it is thanks to it that our AI model will perform well or not. We tried lot of reward functions, some that we invent, other that we see on other projects and we finish by using the following one:
+We do that thanks to a reward function implemented in the function `step()` of our environment. The reward is an integer, the bigger it is the best the action was. This function is clearly the most important one of all the project because it is thanks to it that our AI model will perform well or not. We tried lot of reward functions, some that we invent, other that we see on other projects and we finish by using the following one:
 
 To punished the car when it do something bad we do:
  - If the car crashes, we stop the simulation and return a reward of $-500$.
@@ -77,8 +77,11 @@ After explaining all of this, here is an example iin next figure. We have plot t
 
 <p align="center">
 <img src="Return/Repport/images/env_example.png" alt="drawing" width="400" height="300"/>
+
+List of rounded reward: $R=[10, 1, 2, 12, 13, 13, 13, 14, 24, 14, 13, 12, 13, -497]$
 </p>
 
 The total reward of a car behavior is the sum of all reward of a simulation with a car behavior. For example, the reward of the car behavior or the figure is
-$\underset{r \in R}{\sum} r= -343$.
+
+$$ \underset{r \in R}{\sum} r= -343 $$
 
