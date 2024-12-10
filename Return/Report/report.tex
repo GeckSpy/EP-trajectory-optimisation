@@ -426,7 +426,7 @@ Focusing on the Deep Q algorithm, we can wonder what are the best hyper-paramete
 \item Lr (learning rate) : the velocity at which the neural network updates the weights. 
 \item Epsilon Decay : the probability that the model will try to explore new ways. 
 }
-We get the following results (figure \ref{figure:Evolution of score depending of hyper-parameter}). These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example, for the batch size, we want to have a batch size of $60$ in order to be efficient.
+We get the following results (figure \ref{figure:Evolution of score depending of hyper-parameter}). These graphs allow us to have an idea on how efficient each hyper-parameter tested is. For example, for the batch size, we want to have a batch size of $60$ in order to be efficient.
         \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.46]{comparaison2.png}
@@ -435,16 +435,38 @@ We get the following results (figure \ref{figure:Evolution of score depending of
         \end{figure}
         
         
-        
+  
 		\subsection*{Best Car: performances of a model trained for few hours }
-        We can now look at the performance of the best car, it is chosen on how efficient it is on the tracks. Firstly, as seen in part one, training for too long on a reduced amount of tracks can lead to over-fitting, we have been able to see this also by training a model for $6$ hours in the same conditions as the other. This model performs way less than the others. We choose the Hyper-parameters chosen thanks to part 2 and the time and number of tracks that maximize the score. You can see on figure \ref{figure:Evolution of best car} the evolution of the car on a map that the car has never seen before. 
+        We can now analyze the performance of the best car, which corresponds to the model with the highest score among the trained models.  
+Firstly, as observed in part one, training for an extended period on a limited number of tracks can lead to overfitting. This phenomenon was also evident when we trained a model for six hours under the same conditions as the others.  
+This model performs significantly worse than the best car.  
+
+Figure \ref{figure:Evolution of best car} illustrates the evolution of the car on tracks it has never encountered before. The model appears to have generalized its knowledge well to new circuits. Moreover, with a global volatility of approximately $1$ and high rewards (as shown in \ref{figure:Best_car_reward}), the training seems relatively stable with respect to the average reward. We attribute this stability to a low learning rate of $10^{-4}$.  
+
+Finally, using the following hyperparameters:  
+\begin{description}
+    \item[Learning rate] $10^{-4}$  
+    \item[Batch size] $40$  
+    \item[Epsilon decay] $30$  
+\end{description}  
+the model demonstrates that the best hyperparameters identified in the previous section work well together. This raises the question of whether this approach to hyperparameter tuning can be generalized to other reinforcement learning algorithms.  
+
+
         \begin{figure}[h]
             \centering
-            \includegraphics[width=0.5\linewidth]{image.png}
+            \includegraphics[scale=0.4]{image.png}
+            \includegraphics[scale=0.4]{best_car_track.png}
             \caption{Evolution of the best car}
             \label{figure:Evolution of best car}
         \end{figure}
-    
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.6]{reward best car.png}
+            \caption{Reward history of the best car during the training}
+            \label{figure:Best_car_reward}
+        \end{figure}
+
     
     \section*{Conclusion}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.20)  10 DEC 2024 23:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.20)  11 DEC 2024 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1317,17 +1317,32 @@ Overfull \hbox (14.97218pt too wide) in paragraph at lines 432--433
  [][] 
  []
 
-<./images/image.png, id=114, 516.93124pt x 339.2675pt>
+[6 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/graphe_comparaison.png>]
+<./images/image.png, id=124, 516.93124pt x 339.2675pt>
 File: ./images/image.png Graphic file (type png)
 <use ./images/image.png>
-Package pdftex.def Info: ./images/image.png  used on input line 443.
-(pdftex.def)             Requested size: 241.84843pt x 158.72581pt.
+Package pdftex.def Info: ./images/image.png  used on input line 457.
+(pdftex.def)             Requested size: 206.76883pt x 135.70459pt.
+<./images/best_car_track.png, id=125, 468.75125pt x 390.45876pt>
+File: ./images/best_car_track.png Graphic file (type png)
+<use ./images/best_car_track.png>
+Package pdftex.def Info: ./images/best_car_track.png  used on input line 458.
+(pdftex.def)             Requested size: 187.49716pt x 156.18073pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/graphe_comparaison.png>] [7 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/comparaison3.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/graphe_reward.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 464.
- (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 1.tex) [8 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/comparaison2.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/image.png>] (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 2.tex) [9] (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.aux)
+<./images/reward best car.png, id=126, 578.16pt x 361.35pt>
+File: ./images/reward best car.png Graphic file (type png)
+<use ./images/reward best car.png>
+Package pdftex.def Info: ./images/reward best car.png  used on input line 465.
+(pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/comparaison3.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/graphe_reward.png>] [8 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/comparaison2.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/image.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/best_car_track.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 487.
+ (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 1.tex) [9 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/reward best car.png>] (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 2.tex) [10] (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1336,18 +1351,18 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36616 strings out of 474116
- 750812 string characters out of 5743681
+ 36640 strings out of 474116
+ 751531 string characters out of 5743681
  2027187 words of memory out of 5000000
- 58230 multiletter control sequences out of 15000+600000
+ 58252 multiletter control sequences out of 15000+600000
  626269 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,8n,99p,759b,1280s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,8n,99p,715b,1280s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.pdf" (9 pages, 827337 bytes).
+Output written on "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.pdf" (10 pages, 898827 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 109 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 212 words of extra memory for PDF output out of 10000 (max. 10000000)
 
