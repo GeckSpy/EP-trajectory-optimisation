@@ -204,44 +204,53 @@ You can see the complete project on our public \href{https://github.com/GeckSpy/
 
 	\section*{Introduction}
 
-We focus on solving the problem of optimizing a car's trajectory using a Deep Q-Learning model. The goal is to assess the ability of this model to generalize its experience from a limited number of circuits to new ones. To achieve this, we consider the car's trajectory in a plane under a simplified physics model. The model's performance will be compared to that of a genetic algorithm. Then, we will examine the impact of the chosen hyper-parameters on the model's training performance. Finally, we will explore the model's limitations when trained on a large amount of data.
+We focus on solving the problem of optimizing a car's trajectory using a Deep Q-Learning model. 
+The goal is to assess the ability of this model to generalize its experience from a limited number of circuits to new ones. 
+To achieve this, we consider the car's trajectory in a plane under a simplified physics model. 
+The model's performance will be compared to that of a genetic algorithm. 
+Then, we will examine the impact of the chosen hyper-parameters on the model's training performance. 
+Finally, we will explore the model's limitations when trained on a large amount of data.
 
 	\section*{Modeling}
 		\subsection*{Racing environment}
 			\subsubsection*{Tracks}
-A track is originally a .png file which looks like the left image of figure \ref{figure:track}. Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. After that, we crop the image, compute the starting point, and determine the lines of the track (these will be explained in the reward section) to obtain a final result that looks like the right image of figure \ref{figure:track}. The white squares represent the road, and the green point represents the starting point.
+A track is originally a .png file as shown by the first image of figure \ref{figure:track}.
+ Then, the image is converted to a matrix $T$ such that $T[0][0]$ is the bottom left corner. 
+ Finally, we crop the image, compute the starting point, and determine the lines of the track (these will be explained in the reward section) to obtain the final result shown by figure \ref{figure:track}. 
+ 
 
 \begin{center}
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=5cm, height=4cm]{track_06.png}
 		\includegraphics[width=5cm, height=4cm]{track_06_computed.png}
-		\caption{\underline{.png and computed track}}
+		\caption{\underline{Before and after processing the track :} the white squares represent the road, and the green point represents the starting point }
 		\label{figure:track}
 	\end{figure}
 \end{center}
-
 	
-			\subsubsection*{Cars' physics}
-The car's physics model is quite simple. It follows a 2D cartoon-like set of physical laws that behave as follows:\\
-The car is characterized by two main properties: its speed $s \in [0, \text{MaxSpeed}]$ and its rotation $\alpha \in [0, 360]$.\\
-The physical laws work as follows: at each time step, the car moves to its next coordinates in the direction defined by its rotation, covering a distance equal to its speed.\\
-If the current coordinates of the car are $(x, y)$, its speed is $s$, and its rotation is $\alpha$, then after one time step, the new coordinates of the car will be:
-\[
-(s \cdot \cos\left(\frac{\pi}{180}\alpha\right) + x,\; s \cdot \sin\left(\frac{\pi}{180}\alpha\right) + y)
-\]
+			\subsubsection*{Car's physics}
+The car's physics model is quite simple, it follows a 2D cartoon-like set of physical laws :
+\begin{itemize}
+    \item The car is characterized by two main properties: its speed $s \in [0, \text{MaxSpeed}]$ and its direction $\alpha \in [0, 360]$
+    \item The physical laws work as follows: at each time step, the car moves in the direction defined by $\alpha$, covering a distance equal to its speed.
+    \item If the current coordinates are $(x, y)$, its speed is $s$, and its direction is $\alpha$, then after one time step, the new coordinates of the car will be:
+    \[
+    (s \cdot \cos\left(\frac{\pi}{180}\alpha\right) + x,\; s \cdot \sin\left(\frac{\pi}{180}\alpha\right) + y)
+    \]
+\end{itemize}
 
 
-Moreover, at each time step, the car can take an action:
+Moreover, at each time step, the car will take an action:
 \mlist{
 \item It can accelerate, this will increase the car's speed by a constant.
 \item It can brake, this will decrease the car's speed by a constant. Note that the car cannot have a negative speed, it means that it cannot go backward.
 \item It can turn, i.e. add a constant $\in \llbracket-K,K\rrbracket$ to its rotation. $K$ is a constant that is the maximum angle the car can turn per time step.
 }
 \tab \\
-The car needs to interact with the track, therefore we need to decide what is the state of a car, i.e. what the car knows about the environment. 
-We could model a state by the matrix of the track and the information of the car but this would lead to a too big state because a track can have size $900\times600$ pixels and there is a great diversity of possible tracks. 
-To reduce the dimension of the problem, we decided represent a state as a real car racer would see it. Then, the state of a car is an array $V$ of size $8$.
+The car needs to interact with the track, therefore we need to decide what is the state of a car, i.e, what the car knows about the environment. 
+We could model a state by the matrix of the track and the information of the car but this would lead to a state of large dimension because a track can have size $900\times600$ pixels. Moreover, it will be hard to train from those states because there is a great diversity of possible tracks. 
+To reduce the dimension of the problem, we decided to represent a state as a real car racer would see it. Then, the state of a car is an array $V$ of size $8$.
 \mlist{
 \item $V_0$ is the current speed of the car
 \item $\forall i\in\{1,...,7\}$, $V_i$ is the distance of the car to the next wall in the direction $\alpha + A_{i-1}$ where $\alpha$ is the current rotation of the car and $A=[60, 40, 20, 0, -20, -40, -60]$
