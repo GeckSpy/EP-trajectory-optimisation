@@ -324,9 +324,9 @@ def training(lr=1e-4,epsilon_decay=30.,batch_size = 40,time_bound = 60*(1),track
          env.model.save(filename)
          res["DQN_model_param_is_saved"] = True
 
-    plt.plot(reward_history)
-    plt.plot(volatility_history)
-    plt.show()
+    # plt.plot(reward_history)
+    # plt.plot(volatility_history)
+    # plt.show()
     
     return res
 
@@ -399,7 +399,4 @@ def part3_data():
             
 
 # part1/2/3_data are used to compute the data of the section Evaluation of the report
-
-
-part1_data()
 
