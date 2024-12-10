@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.20)  10 DEC 2024 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.20)  10 DEC 2024 17:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1238,12 +1238,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <./images/track_06.png, id=46, 903.375pt x 602.25pt>
 File: ./images/track_06.png Graphic file (type png)
 <use ./images/track_06.png>
-Package pdftex.def Info: ./images/track_06.png  used on input line 216.
+Package pdftex.def Info: ./images/track_06.png  used on input line 217.
 (pdftex.def)             Requested size: 142.25475pt x 113.80379pt.
 <./images/track_06_computed.png, id=47, 526.96875pt x 460.72125pt>
 File: ./images/track_06_computed.png Graphic file (type png)
 <use ./images/track_06_computed.png>
-Package pdftex.def Info: ./images/track_06_computed.png  used on input line 217.
+Package pdftex.def Info: ./images/track_06_computed.png  used on input line 218.
 (pdftex.def)             Requested size: 142.26738pt x 113.80917pt.
  [1
 
@@ -1251,23 +1251,23 @@ Package pdftex.def Info: ./images/track_06_computed.png  used on input line 217.
 <./images/car_state.png, id=65, 304.13625pt x 187.70125pt>
 File: ./images/car_state.png Graphic file (type png)
 <use ./images/car_state.png>
-Package pdftex.def Info: ./images/car_state.png  used on input line 247.
+Package pdftex.def Info: ./images/car_state.png  used on input line 253.
 (pdftex.def)             Requested size: 113.80948pt x 85.35837pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 254.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 260.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/track_06.png (PNG copy)> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/track_06_computed.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/car_state.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 258--265
+Underfull \hbox (badness 10000) in paragraph at lines 266--273
 
  []
 
-<./images/env_example.png, id=80, 691.58376pt x 549.05125pt>
+<./images/env_example.png, id=81, 691.58376pt x 549.05125pt>
 File: ./images/env_example.png Graphic file (type png)
 <use ./images/env_example.png>
-Package pdftex.def Info: ./images/env_example.png  used on input line 274.
+Package pdftex.def Info: ./images/env_example.png  used on input line 282.
 (pdftex.def)             Requested size: 170.7111pt x 142.26404pt.
 [3 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/env_example.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 325--331
+Underfull \hbox (badness 10000) in paragraph at lines 333--339
 
  []
 
@@ -1275,15 +1275,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 325--331
 <./images/graphe_comparaison.png, id=100, 867.24pt x 433.62pt>
 File: ./images/graphe_comparaison.png Graphic file (type png)
 <use ./images/graphe_comparaison.png>
-Package pdftex.def Info: ./images/graphe_comparaison.png  used on input line 356.
+Package pdftex.def Info: ./images/graphe_comparaison.png  used on input line 364.
 (pdftex.def)             Requested size: 563.69934pt x 281.84966pt.
 
-Overfull \hbox (80.00247pt too wide) in paragraph at lines 356--357
+Overfull \hbox (80.00247pt too wide) in paragraph at lines 364--365
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--360
+Underfull \hbox (badness 10000) in paragraph at lines 357--368
 
  []
 
@@ -1291,10 +1291,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--360
 <./images/comparaison3.png, id=106, 867.24pt x 433.62pt>
 File: ./images/comparaison3.png Graphic file (type png)
 <use ./images/comparaison3.png>
-Package pdftex.def Info: ./images/comparaison3.png  used on input line 366.
+Package pdftex.def Info: ./images/comparaison3.png  used on input line 374.
 (pdftex.def)             Requested size: 476.98349pt x 238.49173pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--370
+Underfull \hbox (badness 10000) in paragraph at lines 369--378
 
  []
 
@@ -1302,25 +1302,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--370
 <./images/graphe_reward.png, id=116, 462.528pt x 346.896pt>
 File: ./images/graphe_reward.png Graphic file (type png)
 <use ./images/graphe_reward.png>
-Package pdftex.def Info: ./images/graphe_reward.png  used on input line 375.
+Package pdftex.def Info: ./images/graphe_reward.png  used on input line 383.
 (pdftex.def)             Requested size: 241.84843pt x 181.38736pt.
 <./images/comparaison2.png, id=118, 1084.05pt x 361.35pt>
 File: ./images/comparaison2.png Graphic file (type png)
 <use ./images/comparaison2.png>
-Package pdftex.def Info: ./images/comparaison2.png  used on input line 391.
+Package pdftex.def Info: ./images/comparaison2.png  used on input line 399.
 (pdftex.def)             Requested size: 498.66905pt x 166.223pt.
 
-Overfull \hbox (14.97218pt too wide) in paragraph at lines 391--392
+Overfull \hbox (14.97218pt too wide) in paragraph at lines 399--400
  [][] 
  []
 
 <./images/image.png, id=120, 516.93124pt x 339.2675pt>
 File: ./images/image.png Graphic file (type png)
 <use ./images/image.png>
-Package pdftex.def Info: ./images/image.png  used on input line 402.
+Package pdftex.def Info: ./images/image.png  used on input line 410.
 (pdftex.def)             Requested size: 241.84843pt x 158.72581pt.
 [7 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/comparaison3.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/graphe_reward.png>] [8 </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/comparaison2.png> </Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/image.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 419.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 427.
  (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 1.tex) (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 2.tex) [9] [10] (/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1330,15 +1330,15 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36615 strings out of 474116
- 750800 string characters out of 5743681
+ 36617 strings out of 474116
+ 750819 string characters out of 5743681
  2023187 words of memory out of 5000000
- 58229 multiletter control sequences out of 15000+600000
- 623277 words of font info for 106 fonts, out of 8000000 for 9000
+ 58230 multiletter control sequences out of 15000+600000
+ 626269 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,8n,99p,997b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,8n,99p,997b,1280s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.pdf" (10 pages, 842342 bytes).
+Output written on "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.pdf" (10 pages, 836636 bytes).
 PDF statistics:
  344 PDF objects out of 1000 (max. 8388607)
  252 compressed objects within 3 object streams
