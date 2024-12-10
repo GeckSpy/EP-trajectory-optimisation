@@ -79,5 +79,6 @@ After explaining all of this, here is an example iin next figure. We have plot t
 <img src="Return/Repport/images/env_example.png" alt="drawing" width="400" height="300"/>
 </p>
 
-The total reward of a car behavior is the sum of all reward of a simulation with a car behavior. For example, the reward of the car behavior or the figure is $\underset{r \in R}{\sum} r= -343$.
+The total reward of a car behavior is the sum of all reward of a simulation with a car behavior. For example, the reward of the car behavior or the figure is
+$\underset{r \in R}{\sum} r= -343$.
 
