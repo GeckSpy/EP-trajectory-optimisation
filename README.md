@@ -172,3 +172,27 @@ Finally, we can look at the evolution of the reward for the Deep Q learning for 
 <img src="Return/Repport/images/graphe_reward.png" alt="drawing" width="400" height="300"/>
 </p>
 
+
+## Influence of Hyper-parameters on Deep Q-Learning
+Focusing on the Deep Q algorithm, we can ask ourselves what are the best hyper-parameters. We focused on $3$ hyper-parameters that we perceived as more important in our model:
+ - Batch size : this is the number of samples that are kept in memory between each step of the training. 
+ - Lr (learning rate) : this is the velocity at which the neural network update the weights. 
+ - Epsilon Decay : this is the probability that the model will try to explore new ways. 
+
+We get the following results. These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example for batch size, we want to have a batch size of $60$ in order to be efficient.
+
+<p align="center">
+<img src="Return/Repport/images/comparaison2.png" alt="drawing" width="1000" height="300"/>
+</p>
+        
+        
+        
+## Best Car: performances of a model trained for few hours
+We can now look at the performance of the best car, it is chosen on how efficient it is on the tracks. Firstly, as seen in part one, training for too long on a reduced amount of tracks can lead to over-fitting, we have been able to see this also by training a model for $6$ hours in the same conditions as the other. This model performs way less than the others. We choose the Hyper-parameters chosen thanks to part 2 and the time and number of tracks that maximize the score. You can see on next figure the evolution of the car on a map that the car has never seen before. 
+
+<p align="center">
+<img src="Return/Repport/images/image.png" alt="drawing" width="550" height="400"/>
+</p>
+    
+# Conclusion
+The goal of the project was to train an AI model to choose the best trajectory for a car on random tracks. To carry out this project, we created an environment to model the evolution of a car on different tracks, then we tried to use different types of training to learn how to use the training algorithm. In particular, we chose the genetic algorithm and the Deep Q-learning algorithm. Finding a relevant reward function for the algorithm was a main part of the work, then evaluating the algorithm allowed us to choose the best hyper-parameters for our models as well as the best training time and number of tracks. Our goal was to be able to compare the performance of the algorithm used and we believe that using the score and global volatility were relevant measures. Initially, we wanted to compare the performance of the algorithms with real performances, this would allow us to keep a foot in reality and to be able to have an idea of the relevance of our work. However, this seems to be much more complicated but it could be an interesting extension of our work.
