@@ -250,58 +250,65 @@ Moreover, at each time step, the car will take an action:
 \tab \\
 The car needs to interact with the track, therefore we need to decide what is the state of a car, i.e, what the car knows about the environment. 
 We could model a state by the matrix of the track and the information of the car but this would lead to a state of large dimension because a track can have size $900\times600$ pixels. Moreover, it will be hard to train from those states because there is a great diversity of possible tracks. 
-To reduce the dimension of the problem, we decided to represent a state as a real car racer would see it. Then, the state of a car is an array $V$ of size $8$.
+To reduce the dimension of the problem, we decided to represent a state as a real car racer would see it. Then, the state of a car is an array $V$ of size $8$ : 
 \mlist{
 \item $V_0$ is the current speed of the car
-\item $\forall i\in\{1,...,7\}$, $V_i$ is the distance of the car to the next wall in the direction $\alpha + A_{i-1}$ where $\alpha$ is the current rotation of the car and $A=[60, 40, 20, 0, -20, -40, -60]$
+\item $\forall i\in\{1,...,7\}$, $V_i$ is the distance of the car to the closest wall in the direction $\alpha + A_{i-1}$ where $\alpha$ is the current direction of the car and $A=[60, 40, 20, 0, -20, -40, -60]$
 }
 Then, a typical state is represented by the figure \ref{figure:car state}.
 \begin{center}
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=4cm, height=3cm]{car_state.png}
-		\caption{\underline{Car state}}
+		\caption{\underline{Car's state}}
 		\label{figure:car state}
 	\end{figure}
 \end{center}
 		
 			\subsubsection*{Technical aspects of the environment}
-To manipulate our environment, we use the python packages \texttt{gymnasium} which provides code conventions for Markov decision process environments (i.e. environment in which at each time step you have to take an action and receive a reward). 
+To manipulate our environment, we use the python package \texttt{gymnasium} which provides conventions for Markov decision process environments (i.e. environment in which at each time step you have to take an action and receive a reward). 
 The environment must have some essential methods: \texttt{reset()} that resets the environment in order to begin a new simulation, \texttt{render()} that renders the current state of our environment, 
-and \texttt{step()} that does one step of time, i.e. given an action, the \texttt{step()} function figure out is the car has crashed or not, move the car to its next position and return the new state of the car, a reward and if the car has crashed.\\
-Finally, the environment has a variable \texttt{time} which measures how much time is discretized
+and the \texttt{step()} function which moves the car to the next position and return the new state, a reward and a boolean representing if the car has crashed or not.
+Finally, the environment has a variable \texttt{time} which measures how much time is discretized.
 		
 			\subsubsection*{Rewards}
-For those type of problem where the AI model has to compute a behavior, the AI model produces something which look like a function $f$ that take a car state and return an action. We need to specifies to our AI model when it produce a good action and a bad action, for instance, if a car crash, we need to punish the AI model.\\
-We do that thanks to a reward function implemented in the function \texttt{step()} of our environment. The reward is an integer, the bigger it is the best the action was. This function is clearly the most important one of all the project because it is thanks to it that our AI model will perform well or not. We tried lot of reward functions, some that we invent, other that we see on other projects and we finish by using the following one:\\
+Machine Learning algorithms usually try to optimize an objective function that reflects 
+the problem that the real application wants to solve. In our case the objective function 
+will depend on the rewards that the agent will observe when taking actions. Typically, the reward 
+will be low if the car crashes and high if the car is fast.
+The reward is computed by the method \texttt{step()} of our environment. 
+Clearly, the quality of the training highly depends on quality of the reward function.
+We tried lot of reward functions, some that we invented, other that we saw in other projects and ended up using the following one:\\
 \\
-To punished the car when it do something bad we do:
+To discourage bad choices we do:
 \mlist{
 \item If the car crashes, we stop the simulation and return a reward of $-500$.
-\item If the car is not moving, i.e. has a speed of $0$, the reward is $-10$.
+\item If the car is not moving, (i.e. has a speed of $0$) we return a reward of $-10$.
 }
-For the positive reward, we have automatically computed some track line thanks to an algorithms we ceated (represented in right image of figure \ref{figure:track}). If the car crosses next line, it has a reward of $(+10\times$ the number of lines it has cross in the good order with this action). If the car cross a line in the wrong order, it means that it has gone backward, therefore, we punished the car with a reward of $-200$ and we stop the computation.\\
+For the positive reward, we have automatically computed some track lines thanks to an algorithms we created (represented by the second image of figure \ref{figure:track}). 
+If the car crosses next line, it receives a reward of $(+10\times$ the number of lines it has crossed with one action). 
+If the car crosses a line in the wrong order, it means that it has gone backward, therefore, we punished the car with a reward of $-200$ and we stop the computation.\\
 On top of that, at each time step, we add to the current reward the speed of the car divided by a constant to encourage the car to go fast. Finally, we subtrack the reward by $1$ to encourage the car to cross has many lines has possible with the least amout of time steps.
 
 			\subsubsection*{An example of a car on a track}
-After explaining all of this, here is an example in figure \ref{figure:env example}. We have plot the trajectory of the car, the green color is when the car has accelerate, red color when it has brake and yellow otherwise.
+Figure \ref{figure:env example} shows an example of a car on a track. We plotted the trajectory of the car : the green color means that the car is accelerate, red color means that the car is braking, and yellow represents all the other actions.
 \begin{center}
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=6cm, height=5cm]{env_example.png}\\
 		List of rounded reward: $R=$\texttt{[10, 1, 2, 12, 13, 13, 13, 14, 24, 14, 13, 12, 13, -497]}
-		\caption{\underline{Car state}}
+		\caption{\underline{Car's trajectory}}
 		\label{figure:env example}
 	\end{figure}
 \end{center}
-The total reward of a car behavior is the sum of all reward of a simulation with a car behavior. For example, the reward of the car behavior or the figure \ref{figure:env example} is $\underset{r \in R}{\sum} r= -343$.
+The total reward of a car behavior is the sum of all reward of a simulation with a car behavior. For example, the reward of the car behavior of the figure \ref{figure:env example} is $\underset{r \in R}{\sum} r= -343$.
 
 
 		\subsection*{Deep Q-learning}
 Deep Q-Learning is a reinforcement learning algorithm that combines Q-Learning with Deep Learning to solve complex decision-making problems. It allows an agent to learn how to act optimally in environments with large state spaces by approximating a function, known as the \textit{Q-function}, which evaluates the quality of an action taken in a given state.
     
             \subsubsection*{Q-function}
-The Q-function, $Q(s, a)$, represents the expected cumulative reward an agent will receive after taking action $a$ in state $s$, and then following the optimal policy. The cumulative reward is computed as:
+The Q-function, $Q(s, a)$, represents the expected cumulative reward an agent will receive after taking action $a$ in state $s$, and then following the optimal policy. The Q-function satisfies the Bellman equation:
 \[Q(s, a) = r + \gamma \max_{a'} Q(s', a'),\]
 Where:
 \mlist{
@@ -333,41 +340,55 @@ Where:
 			\subsubsection*{What are genetic algorithms?}
 Genetic algorithms (GA) are probabilistic algorithms based on natural selection. Therefore, GA takes some \textbf{populations} which are sets of solutions (here a solution is a car's behavior), select the best solutions thanks to the reward function. Then, it changes the population by adding new random solutions, adding some \textbf{mutations} which are some small variations of a behavior, adding some \textbf{cross-over} which are the equivalent of natural reproduction. We can either repeat this process a fixed number of generations or for a fixed amount of time.
 		
-			\subsubsection*{Markov Chain modernization}
+			\subsubsection*{Markov Chain modelization}
 We will now introduce a Markov chain modelization for genetic algorithm. We define a Markov chain $(Y_n)_{n\in\mathbb{N}}$ as following:
 \mlist{
 \item A state of $(Y_n)_{n\in\mathbb{N}}$ is a population.
 \item Let $y_0$ be a special state such that if $Y_n = y_0$ then it means that the population of state $Y_n$ contain an optimal solution.
 }
 \tab \\
-Now, the sequence of population of genetic algorithm can be describe with this Markov chains. $Y_n$ represent the population at generation $n$. Notice that the state $y_0$ is an absorbing state. In fact if $Y_n = y_0$ then it mean that the population $P_n$ contain an optimal solution. Since we always keep the best solution of the previous population, it means that $\forall n'>n$, we have that $P_{n'}$ contain an optimal solution. Therefore, $\forall n'>n$, $Y_{n'} = y_0$. Moreover, $y_0$ is the only absorbing state of $(Y_n)_{n\in\mathbb{N}}$.\\
+Now, the sequence of population of genetic algorithm can be describe with this Markov chain. $Y_n$ represents the population at generation $n$. Notice that the state $y_0$ is an absorbing state. In fact if $Y_n = y_0$ then it mean that the population $P_n$ contain an optimal solution. Since we always keep the best solution of the previous population, it means that $\forall n'>n$, we have that $P_{n'}$ contain an optimal solution. Therefore, $\forall n'>n$, $Y_{n'} = y_0$. Moreover, $y_0$ is the only absorbing state of $(Y_n)_{n\in\mathbb{N}}$.\\
 \\
 If we suppose that our mutation and cross-over are made such that a solution $x$ can reach $y$ by a series of a finite number of those operations, then, all solutions $x$ can reach an optimal value. Then every state $y_n$ can reach the state $y_0$. The set of all possible state is finite. Then $\mathbb{P}(Y_n = y_0) \underset{n \rightarrow +\infty}{\rightarrow} 1$\\
 Then $\mathbb{P}($ The population $P_n$ contain an optimal solution$) \underset{n \rightarrow +\infty}{\rightarrow} 1$.\\
 Thus, the genetic algorithm converge toward a global optimal solution. However, we do not know how many time it will take in average.
 		
 			\subsubsection*{NEAT}
-Basic genetic algorithms are not efficient enough to compute an optimized behavior. Therefore, we will use the famous python packages called \texttt{NEAT}. It is an optimized generalized genetic algorithms with represent solution as dynamic neural network. By dynamic we mean that the algorithm can add or delete some of the nodes of the neural network. The principle of GA stay the same but we have a lot more hyper-parameters.
+Basic genetic algorithms are not efficient enough to compute an optimized policy in a reasonable time. 
+Therefore, we will use the a python package called \texttt{NEAT}. 
+This is an optimized generalized genetic algorithm which represents solutions as dynamic neural network. 
+By dynamic we mean that the algorithm can add or delete some of the nodes of the neural network. 
+The principle of GA stay the same but we have a lot more hyper-parameters.
 	
 	
 	\section*{Simulation}
-Once we completed the modeling of the environment, the deep Q-learning algorithm and the genetic algorithm, we have to compute some simulation to process evaluation performance. We will compare our two algorithms using various metrics. For this purpose, we choose the following metric: the average reward after training depending of some parameter, we call it the score of a training. We measure this value across different training durations and varying the numbers of tracks used to training the models. To ensure robustness and evaluate potential over-fitting, we test the models on tracks that were not included in the training set.\\
-This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. The goal is for the cars to complete laps as quickly as possible, and the average reward reflects their performance under these conditions.
+Once we completed the modeling of the environment, the Deep Q-Learning algorithm and the Genetic algorithm, we trained several models and evaluated their performances. 
+We compared our two algorithms using several metrics. 
+For this purpose, we chose the following metric: the average reward after training depending of some parameter, we call it the score of a training. 
+We measured this value across different training durations and varying the numbers of tracks used to train the models. 
+To ensure robustness and evaluate potential over-fitting, we tested the models on tracks that were not included in the training set.
+%This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. 
+The goal of the car is to complete laps as quickly as possible, and the average reward reflects their performance under these conditions.
+\\
+We will evaluate the performances of the Deep Q-Learning algorithm in three steps: 
 \mlist{
-\item First, we will compare genetic algorithm to Q-learning depending of the training time and the number of tracks used to train the car. We will train our algorithms during $10$ to $60$ minutes and with $10$ to $67$ tracks (which represent $80\%$ of the total number of tracks created).
-\item Then, we will compare the result of deep Q-learning depending of some hyper-parameters. The goal here is to be able to find the hyper-parameters that fit the most the situation, and for us this evaluation is only possible by running the algorithms with different parameters.
-\item Finally, we will evaluate the performance or the best car we found using deep Q-learning.
+\item First, we will compare genetic algorithm to Deep Q-Learning depending of the training time and the number of tracks used to train the car. We will train our algorithms during $10$ to $60$ minutes and with $10$ to $67$ tracks (which represents $80\%$ of the total number of tracks created).
+\item Then, we will compare the result of Deep Q-Learning depending of some hyper-parameters. The goal here is to be able to find the hyper-parameters that fit the most with our problem, and this evaluation can only be made by running the algorithms with different parameters.
+\item Finally, we will evaluate the performance of the best model we found using Deep Q-Learning.
 }
 
     \section*{Experimental}
-All the computations presented in this section were performed on the \href{https://www.grid5000.fr}{Grid5000} infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions, as they were carried out on machines with equivalent performance and assure stability of our executions.
+All the computations presented in this section were performed on the \href{https://www.grid5000.fr}{Grid5000} infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions. 
+They were carried out on stable machines with equivalent performances.
 
 		\subsection*{Comparison between Deep Q-Learning and Genetic Algorithm}
-Firstly, our goal was to be able to compare the different models we tried to use to train the car, in order to do that, we choose to give a certain time and a certain amount of tracks for the different models. The models were allowed to be training for this amount of time on \href{https://www.grid5000.fr}{Grid5000}.\\
-We choose to evaluate the models on these metrics because we believed that they were the most important in the training of such AI. Indeed, these metrics allow the users to have an idea on how powerful can the models be.\\
-As said before, we choose to evaluate the average reward on tracks on which the car has not trained, we believed it is the most relevant way to evaluate the training because it allows us to evaluate if there is over-fitting or not and this represent how much the car is doing well on the track.\\
+Firstly, our goal was to be able to compare the different models we tried to use to train the car, in order to do that, we chose to give a certain time and a certain amount of tracks for the different models. The models were allowed to be training for this amount of time on \href{https://www.grid5000.fr}{Grid5000}.\\
+We chose to evaluate the models on these metrics because we believe that they are the most important in the training of such AI. Indeed, these metrics allow the users to have an idea on how powerful can the models be.\\
+As said before, we chose to evaluate the average reward on tracks on which the car has not trained, we believe it is the most relevant way to evaluate the training because it allows us to evaluate if there is over-fitting or not 
+and this represents how well is the car doing on the track.\\
 \\
-Since the training can be long to have satisfying result, we choose to concentrate ourselves on the following durations : $\{10;40;60\}$ (minutes) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluate these trainings on $20$ tracks that are not in the training set. The two models are run with specific hyper-parameters for this section that are described in the final section \pageref{Hyperparameters}. The result are in figure \ref{figure:compare GA VS DQ}.
+Since the training can be long to have satisfying result, we chose to focus ourselves on the following durations : $\{10;40;60\}$ (minutes) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluated these trainings on $20$ tracks that are not in the training set. The two models are run with specific hyper-parameters that are described in the final section \pageref{Hyperparameters}. 
+The result are shown in figure \ref{figure:compare GA VS DQ}.
         \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.65]{graphe_comparaison.png}
@@ -375,9 +396,9 @@ Since the training can be long to have satisfying result, we choose to concentra
             \label{figure:compare GA VS DQ}
         \end{figure}
 
-We can notice that the Deep-Q algorithm outperform the Genetic algorithm for every test. We can also notice that sometimes the use of more time or more tracks can lower the performance or our deep Q-learning algorithm. This is surely due to over-fitting.\\
+We can notice that the Deep-Q algorithm outperforms the Genetic algorithm in every test. Also, we notice that sometimes the use of more time or more tracks can lower the performance or our Deep Q-Learning algorithm. This is surely due to over-fitting.\\
 \\
-To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. In order for the algorithm to perform efficiently, we want it to have low standard deviation. The result are shown in figure \ref{figure:standard deviation}.
+To compare the models, we can also look at the global volatility of the rewards, this represents the standard deviation of the cumultative rewards observed during the training. In order for the algorithm to perform efficiently, we want it to have low standard deviation. The result are shown in figure \ref{figure:standard deviation}.
         \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.55]{comparaison3.png}
@@ -386,7 +407,7 @@ To compare the models, we can also look at the global volatility of the solution
         \end{figure}
  
 \newpage
-Finally, we can look at the evolution of the reward for the Deep Q learning for $60$ minutes of training on $67$ tracks to have an idea the possible over-fitting happening for this training (figure \ref{figure:evolution of the reward}). We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting.
+Finally, we can look at the evolution of the reward for the Deep Q-Learning for $60$ minutes of training on $67$ tracks to estimate when is over-fitting happening for this training (figure \ref{figure:evolution of the reward}). We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting.
         \begin{figure}[ht]
             \centering
             \includegraphics[width=0.5\linewidth]{graphe_reward.png}
@@ -396,17 +417,17 @@ Finally, we can look at the evolution of the reward for the Deep Q learning for 
         
         
 		\subsection*{Influence of Hyper-parameters on Deep Q-Learning}
-Focusing on the Deep Q algorithm, we can ask ourselves what are the best hyper-parameters. We focused on $3$ hyper-parameters that we perceived as more important in our model:
+Focusing on the Deep Q algorithm, we can wonder what are the best hyper-parameters. We focused on $3$ hyper-parameters that we perceived as more important in our model:
 \mlist{
-\item Batch size : this is the number of samples that are kept in memory between each step of the training. 
-\item Lr (learning rate) : this is the velocity at which the neural network update the weights. 
+\item Batch size : this is the number of samples used to optimize the model's parameters for each optimization step. 
+\item Lr (learning rate) : this is the velocity at which the neural network updates the weights. 
 \item Epsilon Decay : this is the probability that the model will try to explore new ways. 
 }
-We get the following results (figure \ref{figure:Evolution of score depending of hyper-parameter}). These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example for batch size, we want to have a batch size of $60$ in order to be efficient.
+We get the following results (figure \ref{figure:Evolution of score depending of hyper-parameter}). These graphs allows us to have an idea on how efficient each hyper-parameter tested is. For example, for the batch size, we want to have a batch size of $60$ in order to be efficient.
         \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.46]{comparaison2.png}
-            \caption{Evolution of the score after fluctuating hyper-parameters}
+            \caption{Evolution of the score according to hyper-parameters}
             \label{figure:Evolution of score depending of hyper-parameter}
         \end{figure}
         
@@ -423,20 +444,24 @@ We get the following results (figure \ref{figure:Evolution of score depending of
     
     
     \section*{Conclusion}
-The goal of the project was to train an AI model to choose the best trajectory for a car on random tracks. To carry out this project, we created an environment to model the evolution of a car on different tracks, then we tried to use different types of training to learn how to use the training algorithm. In particular, we chose the genetic algorithm and the Deep Q-learning algorithm. Finding a relevant reward function for the algorithm was a main part of the work, then evaluating the algorithm allowed us to choose the best hyper-parameters for our models as well as the best training time and number of tracks. Our goal was to be able to compare the performance of the algorithm used and we believe that using the score and global volatility were relevant measures. Initially, we wanted to compare the performance of the algorithms with real performances, 
-    this would allow us to keep a foot in reality and to be able to have an idea of the relevance of our work. However, this seems to be much more complicated but it could be an interesting extension of our work.
+
+The goal of the project was to train an AI model to choose the best trajectory for a car on random tracks. To carry out this project, we created an environment to model the evolution of a car on different tracks. Then, we experimented with different types of training algorithms. In particular, we selected the genetic algorithm and the Deep Q-learning algorithm.
+Finding a relevant reward function for the algorithm was a key part of the work. Evaluating the algorithm then enabled us to determine the best hyperparameters for our models, as well as the optimal training time and number of tracks. Our goal was to compare the performance of the algorithms, and we believe that using the score and global volatility were relevant metrics.
+Initially, we aimed to compare the performance of the algorithms with real-world performances. This would have allowed us to maintain a connection to reality and to assess the relevance of our work. However, this proved to be much more challenging than expected, but it could serve as an interesting extension of our project.
+
+
 
 \newpage
 \section*{Appendix}
 \subsection*{Reproducibility}
-This section store the data necessary to reproduce the experiments: \subsubsection*{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
+This section stores the data necessary to reproduce the experiments: \subsubsection*{Comparison between the Genetic algorithm and the Deep Q-Learning algorithm}
 Hyper-parameters for the genetic algorithm for part 1.
 \begin{mybox}
     \tiny{
 \lstinputlisting{Annexe 1}}
 \end{mybox}
 \label{Hyperparameters}
-Hyper-parameters for the Deep Q learning algorithm for part 1.
+Hyper-parameters for the Deep Q-Learning algorithm for part 1.
 \begin{mybox}
     \tiny{
 \lstinputlisting{Annexe 2}}
