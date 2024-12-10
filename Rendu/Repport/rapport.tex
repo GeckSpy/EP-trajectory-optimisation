@@ -369,7 +369,7 @@ Since the training can be long to have satisfying result, we choose to concentra
 
 We can notice that the Deep-Q algorithm outperform the Genetic algorithm for every test. We can also notice that sometimes the use of more time or more tracks can lower the performance. This can be due to over-fitting. \\
 \\
-To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. In order for the algorithm to perform efficiently, we want it to to have low standard deviation. The result are shown in figure \ref{figure:standard deviation}.
+To compare the models, we can also look at the global volatility of the solutions, this represent the standard deviation of score of the training. In order for the algorithm to perform efficiently, we want it to have low standard deviation. The result are shown in figure \ref{figure:standard deviation}.
         \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.55]{comparaison3.png}
@@ -415,7 +415,11 @@ We get the following results (figure \ref{figure:Evolution of score depending of
     
     
     \section*{Conclusion}
-    The goal of the project was to train an AI to choose the best trajectory for a car on a random track. To carry out this project, we created an environment to model the evolution of a car, then we tried to use different types of training to learn how to use the training algorithm. In particular, we chose the genetic algorithm and the deep Q learning algorithm to train the AI. Finding a relevant reward function for the algorithm was a main part of the work, then evaluating the algorithm allowed us to choose the best hyperparameters for our models as well as the best training time and number of tracks. Our goal was to be able to compare the performance of the algorithm used and we believe that using the score and global volatility were relevant measures. Initially, we wanted to compare the performance of the algorithms with real performances, this would allow us to keep a foot in reality and to be able to have an idea of ​​the relevance of our work. However, this seems to be much more complicated but it could be an interesting extension of our work.
+    The goal of the project was to train an AI to choose the best trajectory for a car on a random track. 
+    To carry out this project, we created an environment to model the evolution of a car, 
+    then we tried to use different types of training to learn how to use the training algorithm. 
+    In particular, we chose the genetic algorithm and the Deep Q-learning algorithm to train the AI. Finding a relevant reward function for the algorithm was a main part of the work, then evaluating the algorithm allowed us to choose the best hyperparameters for our models as well as the best training time and number of tracks. Our goal was to be able to compare the performance of the algorithm used and we believe that using the score and global volatility were relevant measures. Initially, we wanted to compare the performance of the algorithms with real performances, 
+    this would allow us to keep a foot in reality and to be able to have an idea of the relevance of our work. However, this seems to be much more complicated but it could be an interesting extension of our work.
 
 \newpage
 \section*{Annexes}
