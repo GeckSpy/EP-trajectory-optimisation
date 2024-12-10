@@ -338,24 +338,24 @@ Where:
 	
 		\subsection*{Genetic algorithms}
 			\subsubsection*{What are genetic algorithms?}
-Genetic algorithms (GA) are probabilistic algorithms based on natural selection. Therefore, GA takes some \textbf{populations} which are sets of solutions (here a solution is a car's behavior), select the best solutions thanks to the reward function. Then, it changes the population by adding new random solutions, adding some \textbf{mutations} which are some small variations of a behavior, adding some \textbf{cross-over} which are the equivalent of natural reproduction. We can either repeat this process a fixed number of generations or for a fixed amount of time.
+Genetic algorithms (GA) are probabilistic algorithms based on natural selection. Therefore, GA takes some \textbf{populations} which are sets of solutions (here a solution is a car's behavior), selects the best solutions thanks to the reward function. Then, it changes the population by adding new random solutions, adding some \textbf{mutations} which are some small variations of a behavior, adding some \textbf{cross-over} which are the equivalent of natural reproduction. We can either repeat this process a fixed number of generations or for a fixed amount of time.
 		
-			\subsubsection*{Markov Chain modelization}
-We will now introduce a Markov chain modelization for genetic algorithm. We define a Markov chain $(Y_n)_{n\in\mathbb{N}}$ as following:
-\mlist{
-\item A state of $(Y_n)_{n\in\mathbb{N}}$ is a population.
-\item Let $y_0$ be a special state such that if $Y_n = y_0$ then it means that the population of state $Y_n$ contain an optimal solution.
-}
-\tab \\
-Now, the sequence of population of genetic algorithm can be describe with this Markov chain. $Y_n$ represents the population at generation $n$. Notice that the state $y_0$ is an absorbing state. In fact if $Y_n = y_0$ then it mean that the population $P_n$ contain an optimal solution. Since we always keep the best solution of the previous population, it means that $\forall n'>n$, we have that $P_{n'}$ contain an optimal solution. Therefore, $\forall n'>n$, $Y_{n'} = y_0$. Moreover, $y_0$ is the only absorbing state of $(Y_n)_{n\in\mathbb{N}}$.\\
-\\
-If we suppose that our mutation and cross-over are made such that a solution $x$ can reach $y$ by a series of a finite number of those operations, then, all solutions $x$ can reach an optimal value. Then every state $y_n$ can reach the state $y_0$. The set of all possible state is finite. Then $\mathbb{P}(Y_n = y_0) \underset{n \rightarrow +\infty}{\rightarrow} 1$\\
-Then $\mathbb{P}($ The population $P_n$ contain an optimal solution$) \underset{n \rightarrow +\infty}{\rightarrow} 1$.\\
-Thus, the genetic algorithm converge toward a global optimal solution. However, we do not know how many time it will take in average.
+% 			\subsubsection*{Markov Chain modelization}
+% We will now introduce a Markov chain modelization for genetic algorithm. We define a Markov chain $(Y_n)_{n\in\mathbb{N}}$ as following:
+% \mlist{
+% \item A state of $(Y_n)_{n\in\mathbb{N}}$ is a population.
+% \item Let $y_0$ be a special state such that if $Y_n = y_0$ then it means that the population of state $Y_n$ contain an optimal solution.
+% }
+% \tab \\
+% Now, the sequence of population of genetic algorithm can be described with this Markov chain. $Y_n$ represents the population at generation $n$. Notice that the state $y_0$ is an absorbing state. In fact if $Y_n = y_0$ then it mean that the population $P_n$ contain an optimal solution. Since we always keep the best solution of the previous population, it means that $\forall n'>n$, we have that $P_{n'}$ contain an optimal solution. Therefore, $\forall n'>n$, $Y_{n'} = y_0$. Moreover, $y_0$ is the only absorbing state of $(Y_n)_{n\in\mathbb{N}}$.\\
+% \\
+% If we suppose that our mutation and cross-over are made such that a solution $x$ can reach $y$ by a series of a finite number of those operations, then, all solutions $x$ can reach an optimal value. Then every state $y_n$ can reach the state $y_0$. The set of all possible state is finite. Then $\mathbb{P}(Y_n = y_0) \underset{n \rightarrow +\infty}{\rightarrow} 1$\\
+% Then $\mathbb{P}($ The population $P_n$ contains an optimal solution$) \underset{n \rightarrow +\infty}{\rightarrow} 1$.\\
+% Thus, the genetic algorithm converges toward a global optimal solution. However, we do not know how many time it will take on average.
 		
 			\subsubsection*{NEAT}
 Basic genetic algorithms are not efficient enough to compute an optimized policy in a reasonable time. 
-Therefore, we will use the a python package called \texttt{NEAT}. 
+Therefore, we will use the \texttt{NEAT} python package. 
 This is an optimized generalized genetic algorithm which represents solutions as dynamic neural network. 
 By dynamic we mean that the algorithm can add or delete some of the nodes of the neural network. 
 The principle of GA stay the same but we have a lot more hyper-parameters.
@@ -364,31 +364,34 @@ The principle of GA stay the same but we have a lot more hyper-parameters.
 	\section*{Simulation}
 Once we completed the modeling of the environment, the Deep Q-Learning algorithm and the Genetic algorithm, we trained several models and evaluated their performances. 
 We compared our two algorithms using several metrics. 
-For this purpose, we chose the following metric: the average reward after training depending of some parameter, we call it the score of a training. 
-We measured this value across different training durations and varying the numbers of tracks used to train the models. 
+For this purpose, we chose the following metric: the average reward after the training, we call it the score of a training. 
+We measured this value across different training durations and varying the number of tracks used to train the models. 
 To ensure robustness and evaluate potential over-fitting, we tested the models on tracks that were not included in the training set.
 %This approach is applied in the context of an AI project where we train AI agents to complete a racing circuit. 
 The goal of the car is to complete laps as quickly as possible, and the average reward reflects their performance under these conditions.
 \\
 We will evaluate the performances of the Deep Q-Learning algorithm in three steps: 
 \mlist{
-\item First, we will compare genetic algorithm to Deep Q-Learning depending of the training time and the number of tracks used to train the car. We will train our algorithms during $10$ to $60$ minutes and with $10$ to $67$ tracks (which represents $80\%$ of the total number of tracks created).
+\item First, we will compare genetic algorithm to Deep Q-Learning depending of the training time and the number of tracks used to train the car. We trained our algorithms during $10$ to $60$ minutes and with $10$ to $67$ tracks (which represents $80\%$ of the total number of tracks created).
 \item Then, we will compare the result of Deep Q-Learning depending of some hyper-parameters. The goal here is to be able to find the hyper-parameters that fit the most with our problem, and this evaluation can only be made by running the algorithms with different parameters.
 \item Finally, we will evaluate the performance of the best model we found using Deep Q-Learning.
 }
 
-    \section*{Experimental}
-All the computations presented in this section were performed on the \href{https://www.grid5000.fr}{Grid5000} infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions. 
-They were carried out on stable machines with equivalent performances.
+    \section*{Experimentation}
 
-		\subsection*{Comparison between Deep Q-Learning and Genetic Algorithm}
-Firstly, our goal was to be able to compare the different models we tried to use to train the car, in order to do that, we chose to give a certain time and a certain amount of tracks for the different models. The models were allowed to be training for this amount of time on \href{https://www.grid5000.fr}{Grid5000}.\\
-We chose to evaluate the models on these metrics because we believe that they are the most important in the training of such AI. Indeed, these metrics allow the users to have an idea on how powerful can the models be.\\
-As said before, we chose to evaluate the average reward on tracks on which the car has not trained, we believe it is the most relevant way to evaluate the training because it allows us to evaluate if there is over-fitting or not 
-and this represents how well is the car doing on the track.\\
+All the computations presented in this section were performed on the \href{https://www.grid5000.fr}{Grid5000} infrastructure, which allowed us to ensure the reproducibility of the results and guarantee a consistent comparison of the executions. 
+They were carried out on stable machines with equivalent performance.
+
+\subsection*{Comparison between Deep Q-Learning and Genetic Algorithm}
+
+Firstly, our goal was to compare the different models we tried to use to train the car. To achieve this, we chose to allocate a certain amount of time and a specific number of tracks for the different models. The models were allowed to train for this amount of time on \href{https://www.grid5000.fr}{Grid5000}.\\
+
+We chose to evaluate the models on these metrics because we believe they are the most important in the training of such AI. Indeed, these metrics provide users with an idea of how powerful the models can be.\\
+
+As mentioned before, we chose to evaluate the average reward on tracks on which the car had not trained. We believe this is the most relevant way to evaluate the training because it allows us to determine if overfitting occurred or not, and it reflects how well the car performs on the tracks.\\
 \\
-Since the training can be long to have satisfying result, we chose to focus ourselves on the following durations : $\{10;40;60\}$ (minutes) and the following number of tracks for the training $\{10;40;67\}$ (tracks). We evaluated these trainings on $20$ tracks that are not in the training set. The two models are run with specific hyper-parameters that are described in the final section \pageref{Hyperparameters}. 
-The result are shown in figure \ref{figure:compare GA VS DQ}.
+Since the training can take a long time to yield satisfying results, we chose to focus on the following durations: $\{10;40;60\}$ (minutes) and the following number of tracks for training: $\{10;40;67\}$ (tracks). We evaluated these trainings on $20$ tracks that were not included in the training set. The two models were run with specific hyperparameters described in the final section \pageref{Hyperparameters}. 
+The results are shown in figure \ref{figure:compare GA VS DQ}.
         \begin{figure}[ht]
             \centering
             \includegraphics[scale = 0.65]{graphe_comparaison.png}
