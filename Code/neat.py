@@ -153,13 +153,13 @@ def training(do_save=False,
     # Return the list of best genomes of each generation
     return dic_info
 
-
-path = "../GA records/" + "run_part1_2024-12-05_16:02:41/" + "best_genome_3600sec_69tracks"
-path2 = "../GA records/" + "run_part1_2024-12-05_22:38:16/" + "best_genome_21600sec_69tracks"
-path3 = "../GA records/" + "run_part1_2024-12-06_08:49:23/" + "best_genome_21600sec_69tracks"
-path4 = "../GA records/" + "run_part1_2024-12-06_14:46:15/" + "best_genome_3600sec_69tracks"
-path5 = "../GA records/" + "run_part1_2024-12-06_14:48:17/" + "best_genome_3600sec_69tracks"
-path6 = "../GA records/" + "run_part1_2024-12-06_14:48:58/" + "best_genome_25200sec_69tracks"
+data_path = "../Return/data/data GA/"
+path  = data_path + "run_part1_2024-12-05_16:02:41/" + "best_genome_3600sec_69tracks"
+path2 = data_path + "run_part1_2024-12-05_22:38:16/" + "best_genome_21600sec_69tracks"
+path3 = data_path + "run_part1_2024-12-06_08:49:23/" + "best_genome_21600sec_69tracks"
+path4 = data_path + "run_part1_2024-12-06_14:46:15/" + "best_genome_3600sec_69tracks"
+path5 = data_path + "run_part1_2024-12-06_14:48:17/" + "best_genome_3600sec_69tracks"
+path6 = data_path + "run_part1_2024-12-06_14:48:58/" + "best_genome_25200sec_69tracks"
 geno = load_genome(path5)
 
 path_config = "./RacingCar.config"
@@ -171,7 +171,7 @@ config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
 evaluate_genome(geno, config, len(TRACKS), 10000, show=True)
 
 def compute_data():
-    liste_training_time_min = [10]#, 40, 60]
+    liste_training_time_min = [10, 40, 60]# times in secondes
     liste_training_time_sec = [60*x for x in liste_training_time_min]
 
     nb_track_training = [40]#[8, 40, int(0.8*len(TRACKS))]
@@ -187,6 +187,6 @@ def compute_data():
                 f.write(json_object)
 
 
-compute_data()
+#compute_data()
 
 
