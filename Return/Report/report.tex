@@ -470,10 +470,15 @@ the model demonstrates that the best hyperparameters identified in the previous 
     
     \section*{Conclusion}
 
-The goal of the project was to train an AI model to choose the best trajectory for a car on random tracks. To carry out this project, we created an environment to model the evolution of a car on different tracks. Then, we experimented with different types of training algorithms. In particular, we selected the genetic algorithm and the Deep Q-learning algorithm.
-Finding a relevant reward function for the algorithm was a key part of the work. Evaluating the algorithm then enabled us to determine the best hyperparameters for our models, as well as the optimal training time and number of tracks. Our goal was to compare the performance of the algorithms, and we believe that using the score and global volatility were relevant metrics.
-Initially, we aimed to compare the performance of the algorithms with real-world performances. This would have allowed us to maintain a connection to reality and to assess the relevance of our work. However, this proved to be much more challenging than expected, but it could serve as an interesting extension of our project.
-
+    The goal of the project was to evaluate the performance of Deep Q-Learning on the problem of optimizing car trajectories. To carry out this project, we created an environment to model the evolution of a car on different tracks. Finding a relevant reward function for the algorithm was a key part of the work.
+    We then measured the performance of Deep Q-Learning using several metrics. In particular, we observed that Deep Q-Learning performs significantly better than the Genetic Algorithm in our context. Evaluating the algorithm allowed us to determine the best hyperparameters for our models, as well as the optimal training time and number of tracks. Our goal was to compare the performance of the algorithms, and we believe that using the score and global volatility were relevant metrics.
+    
+    We observed that, in our case, merging several (locally) optimal parameters led to the best global score. This raises the question of whether this observation holds for other reinforcement learning algorithms and whether it scales to a larger set of hyperparameters.
+    
+    We could have explored many more hyperparameters, such as the size of the replay buffer and the depth or size of the neural network, to perform a deeper analysis of the algorithm. Moreover, we could have compared Deep Q-Learning with other state-of-the-art reinforcement learning algorithms for a fairer comparison. Finally, it is important to recall that the physics of the car used in this project is a simplified model of reality. To evaluate the performance of Deep Q-Learning for real car driving, the model would need to be significantly more complex.
+    
+    
+    
 
 
 \newpage

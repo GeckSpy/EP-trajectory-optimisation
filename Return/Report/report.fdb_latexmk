@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1733873469.24591 "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.tex" "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.pdf" "report" 1733873470.9538 0
+["pdflatex"] 1733875340.70455 "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.tex" "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.pdf" "report" 1733875342.32051 0
   "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/best_car_track.png" 1733870168.40396 34347 8007bf06a218cf0412df4fcdac2f1c6e ""
   "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/car_state.png" 1733836945.76206 10102 a6cd0acca0597f2f655c3acf1d65f0a0 ""
   "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/comparaison2.png" 1733836945.76286 69562 1172a501e6a5d693a283385e8e9220f9 ""
@@ -13,9 +13,9 @@
   "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/./images/track_06_computed.png" 1733836945.76757 84696 c5352644175255c908cc9ac3e8d288a0 ""
   "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 1.tex" 1733836945.76035 1885 e066d0724d8d8132d06c32603675dc41 ""
   "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/Annexe 2.tex" 1733836945.76089 236 7376d26537788b8e300d3d09ab926e50 ""
-  "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.aux" 1733873470.79502 3178 7c27bc91b7694574b6fa09ec6d4f6de7 "pdflatex"
-  "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.out" 1733873470.02879 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.tex" 1733873469.02039 27404 7653383e541e025cd0258ba8a1e6c256 ""
+  "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.aux" 1733875342.16856 3178 7c27bc91b7694574b6fa09ec6d4f6de7 "pdflatex"
+  "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.out" 1733875341.41662 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "/Users/mathieu/Desktop/ENS 2024-2025/performance évaluation/EP-trajectory-optimisation/Return/Report/report.tex" 1733875340.40749 27998 da9481b5d3204b37f057c4d70d6752c7 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1202520719 2327 9d6df24f9c4f7368395224341a95523a ""
