@@ -418,5 +418,3 @@ def part3_data():
 
 # part1/2/3_data are used to compute the data of the section Evaluation of the report
 
-training(time_bound=20)
-
