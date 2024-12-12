@@ -31,14 +31,15 @@ The car's physics model is quite simple, it follows a 2D cartoon-like set of phy
 -  The car is characterized by two main properties: its speed $s \in [0, \text{MaxSpeed}]$ and its direction $\alpha \in [0, 360]$
 -  The physical laws work as follows: at each time step, the car moves in the direction defined by $\alpha$, covering a distance equal to its speed.
 -  If the current coordinates are $(x, y)$, its speed is $s$, and its direction is $\alpha$, then after one time step, the new coordinates of the car will be:
+
 $$ (s \cdot \cos\left(\frac{\pi}{180}\alpha\right) + x,\; s \cdot \sin\left(\frac{\pi}{180}\alpha\right) + y) $$
 
 
 Moreover, at each time step, the car will take an action:
  -  It can accelerate, this will increase the car's speed by a constant.
  -  It can brake, this will decrease the car's speed by a constant. Note that the car cannot have a negative speed, it means that it cannot go backward.
- -  It can turn, i.e. add a constant $\in \llbracket-K,K\rrbracket$ to its rotation. $K$ is a constant that is the maximum angle the car can turn per time step.
-\tab \\
+ -  It can turn, i.e. add a constant $\in [-K,K]$ to its rotation. $K$ is a constant that is the maximum angle the car can turn per time step.
+
 The car needs to interact with the track, therefore we need to decide what is the state of a car, i.e, what the car knows about the environment. 
 We could model a state by the matrix of the track and the information of the car but this would lead to a state of large dimension because a track can have size $900\times600$ pixels. Moreover, it will be hard to train from those states because there is a great diversity of possible tracks. 
 To reduce the dimension of the problem, we decided to represent a state as a real car racer would see it. Then, the state of a car is an array $V$ of size $8$ : 
