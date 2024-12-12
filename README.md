@@ -7,8 +7,6 @@ The project is divided into five parts:
  -  Assessing the performance of Deep Q-Learning with respect to different hyper-parameters.
  -  Evaluating the performance of the best car behavior achieved by both algorithms.
 
-You can see the complete project on our public Github page (https://github.com/GeckSpy/PE-trajectory-optimization).
-
 # Introduction
 
 We focus on solving the problem of optimizing a car's trajectory using a Deep Q-Learning model. 
