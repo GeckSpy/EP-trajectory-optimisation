@@ -44,7 +44,7 @@ The car needs to interact with the track, therefore we need to decide what is th
 We could model a state by the matrix of the track and the information of the car but this would lead to a state of large dimension because a track can have size $900\times600$ pixels. Moreover, it will be hard to train from those states because there is a great diversity of possible tracks. 
 To reduce the dimension of the problem, we decided to represent a state as a real car racer would see it. Then, the state of a car is an array $V$ of size $8$ : 
  -  $V_0$ is the current speed of the car
- -  $\forall i\in\{1,...,7\}$, $V_i$ is the distance of the car to the closest wall in the direction $\alpha + A_{i-1}$ where $\alpha$ is the current direction of the car and $A=[60, 40, 20, 0, -20, -40, -60]$
+ -  $\forall i\in$ {1,...,7}, $V_i$ is the distance of the car to the closest wall in the direction $\alpha + A_{i-1}$ where $\alpha$ is the current direction of the car and $A=[60, 40, 20, 0, -20, -40, -60]$
 Then, a typical state is represented by the next figure.
 
 <p align="center">
