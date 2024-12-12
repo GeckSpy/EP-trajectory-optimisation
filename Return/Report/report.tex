@@ -388,17 +388,18 @@ Firstly, our goal was to compare the different models we tried to use to train t
 
 We chose to evaluate the models on these metrics because we believe they are the most important in the training of such AI. Indeed, these metrics provide users with an idea of how powerful the models can be.\\
 
-As mentioned before, we chose to evaluate the average reward on tracks on which the car had not trained. We believe this is the most relevant way to evaluate the training because it allows us to determine if overfitting occurred or not, and it reflects how well the car performs on the tracks.\\
-\\
-Since the training can take a long time to yield satisfying results, we chose to focus on the following durations: $\{10;40;60\}$ (minutes) and the following number of tracks for training: $\{10;40;67\}$ (tracks). We evaluated these trainings on $20$ tracks that were not included in the training set. The two models were run with specific hyperparameters described in the final section \pageref{Hyperparameters}. 
-The results are shown in figure \ref{figure:compare GA VS DQ}.
-        \begin{figure}[ht]
+As mentioned before, we chose to evaluate the average reward on tracks on which the car had not trained. We believe this is the most relevant way to evaluate the training because it allows us to determine if overfitting occurred or not, and it reflects how well the car performs on the tracks.
+        \begin{figure}[h]
             \centering
-            \includegraphics[scale = 0.65]{graphe_comparaison.png}
+            \includegraphics[scale = 0.55]{graphe_comparaison.png}
             \caption{Comparison between the Genetic algorithm and the Deep Q learning algorithm.}
             \label{figure:compare GA VS DQ}
         \end{figure}
-
+\newpage
+Since the training can take a long time to yield satisfying results, we chose to focus on the following durations: $\{10;40;60\}$ (minutes) and the following number of tracks for training: $\{10;40;67\}$ 
+(tracks). We evaluated these trainings on $20$ tracks that were not included in the 
+training set. The two models were run with specific hyperparameters described in the final section \pageref{Hyperparameters}. 
+The results are shown in figure \ref{figure:compare GA VS DQ}.\\
 We can notice that the Deep-Q algorithm outperforms the Genetic algorithm in every test. Also, we notice that sometimes the use of more time or more tracks can lower the performance or our Deep Q-Learning algorithm. This is surely due to over-fitting.\\
 \\
 To compare the models, we can also look at the global volatility of the rewards, this represents the standard deviation of the cumultative rewards observed during the training. In order for the algorithm to perform efficiently, we want it to have low standard deviation. The result are shown in figure \ref{figure:standard deviation}.
@@ -408,8 +409,6 @@ To compare the models, we can also look at the global volatility of the rewards,
             \caption{Standard deviation after training}
             \label{figure:standard deviation}
         \end{figure}
- 
-\newpage
 Finally, we can look at the evolution of the reward for the Deep Q-Learning for $60$ minutes of training on $67$ tracks to estimate when is over-fitting happening for this training (figure \ref{figure:evolution of the reward}). We can see that the reward does start decreasing after $650$ generations, this can be a sign of over-fitting.
         \begin{figure}[ht]
             \centering
@@ -467,7 +466,7 @@ the model demonstrates that the best hyperparameters identified in the previous 
             \label{figure:Best_car_reward}
         \end{figure}
 
-    
+\newpage
     \section*{Conclusion}
 
     The goal of the project was to evaluate the performance of Deep Q-Learning on the problem of optimizing car trajectories. To carry out this project, we created an environment to model the evolution of a car on different tracks. Finding a relevant reward function for the algorithm was a key part of the work.
