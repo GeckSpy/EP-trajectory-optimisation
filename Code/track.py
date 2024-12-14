@@ -268,7 +268,7 @@ def save_tracks_lines(PATHS, LINES_FOLDER):
         print(name, number)
 
 
-def create_tracks(PATHS, LINES_FOLDER, show=False):
+def create_tracks(PATHS, LINES_FOLDER, show=False) -> list[Track]:
     tracks = []
     counter = 0
     for name, number in PATHS:
@@ -292,3 +292,6 @@ def create_tracks(PATHS, LINES_FOLDER, show=False):
         counter +=1
 
     return tracks
+
+track = create_tracks([["tracks/png/42.png", "42"]], "tracks/track_lines/")[0]
+track.plot()
