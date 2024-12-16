@@ -8,9 +8,6 @@ The project is divided into five parts:
  -  Evaluating the performance of the best car behavior achieved by both algorithms.
 
 
-https://github.com/user-attachments/assets/7cbb1436-8cb5-4f95-9a19-f3a4b35f4fac
-
-
 # Introduction
 
 We focus on solving the problem of optimizing a car's trajectory using a Deep Q-Learning model. 
