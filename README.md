@@ -7,6 +7,9 @@ The project is divided into five parts:
  -  Assessing the performance of Deep Q-Learning with respect to different hyper-parameters.
  -  Evaluating the performance of the best car behavior achieved by both algorithms.
 
+<p align = "center">
+<img src="./presentation-video.gif" alt="demo" style="width:100%;"/>
+</p>
 
 # Introduction
 
